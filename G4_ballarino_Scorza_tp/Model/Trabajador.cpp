@@ -1,72 +1,47 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Trabajador.h"
 
-/**
- * Trabajador implementation
- */
 
 
-/**
- * @return u_int
- */
-u_int Trabajador::get_sueldo() {
-    return null;
+Trabajador::Trabajador(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas)
+    :persona(nombre, sexo, DNI), sueldo(sueldo), horas(horas), dias_vacas(dias_vacas) {
+
 }
 
-/**
- * @param u_int
- * @return void
- */
-void Trabajador::set_sueldo(void u_int) {
+unsigned int Trabajador::get_sueldo() {
+    return this->sueldo;
+}
+
+
+void Trabajador::set_sueldo(unsigned int) {
     return;
 }
 
-/**
- * @return string
- */
+
 string Trabajador::get_horas() {
-    return "";
+    return this->horas;
 }
 
-/**
- * @param string
- * @return void
- */
-void Trabajador::set_horas(void string) {
+
+void Trabajador::set_horas(string) {
     return;
 }
 
-/**
- * @return string
- */
+
 string Trabajador::get_diasv() {
-    return "";
+    return this->dias_vacas;
 }
 
-/**
- * @param string
- * @return void
- */
-void Trabajador::set_diasv(void string) {
+
+void Trabajador::set_diasv(string) {
     return;
 }
 
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI 
- * @param sueldo 
- * @param horas 
- * @param dias_vacas
- */
-void Trabajador::Trabajador(string nombre , char sexo , string DNI , u_int sueldo , string horas , string dias_vacas ) {
 
-}
 
-void Trabajador::Trabajador() {
+
+Trabajador::~Trabajador() {
 
 }

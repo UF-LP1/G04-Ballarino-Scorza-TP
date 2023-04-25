@@ -1,42 +1,28 @@
-/**
- * Project Untitled
- */
 
+//ver
 
 #include "decoracion.h"
 
-/**
- * decoracion implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param tipo_dec
- */
-void decoracion::decoracion(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration tipo_dec ) {
+
+
+decoracion::decoracion(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_dec tipo_decc)
+    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-/**
- * @return tipo_dec
- */
+
 tipo_dec decoracion::get_dec() {
-    return null;
+    return this->tipo_decc;
 }
 
-/**
- * @param tipo_dec
- * @return void
- */
-void decoracion::set_dec(void tipo_dec) {
+
+
+void decoracion::set_dec(tipo_dec tipo_decc) {
     return;
 }
 
-void decoracion::decoracion() {
+decoracion::~decoracion() {
 
 }

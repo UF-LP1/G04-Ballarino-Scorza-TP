@@ -1,42 +1,28 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Velas.h"
 
-/**
- * Velas implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param Material
- */
-void Velas::Velas(string marca , string color, string tamanio , string precio , u_int cant_prod , string Material ) {
+
+
+Velas::Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string Material)
+    :producto(marca, color, tamanio, precio, cant_prod) {
+    this->Material = Material;
 
 }
 
-/**
- * @param string
- * @return void
- */
-void Velas::set_material(void string) {
+
+void Velas::set_material(string) {
     return;
 }
 
-/**
- * @return string
- */
+
 string Velas::get_material() {
-    return "";
+    return this->Material;
 }
 
-void Velas::Velas() {
+Velas::~Velas() {
 
 }

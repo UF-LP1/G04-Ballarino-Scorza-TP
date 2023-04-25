@@ -1,104 +1,64 @@
-/**
- * Project Untitled
- */
 
 
 #include "Cliente.h"
 
-/**
- * Cliente implementation
- */
 
-
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI 
- * @param capricho_vajilla
- * @param incant_capricho
- * @param numerodeturno 
- * @param pararegalar
- */
-void Cliente::Cliente(string nombre , char sexo , string DNI , bool capricho_vajilla, int incant_capricho, u_int numerodeturno , bool pararegalar ) {
-
+Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,
+    bool pararegalar) :persona(nombre, sexo, DNI) {
+    this->cant_caprichos_vaj = cant_caprichos_vaj;
+    this->capricho_vajilla = capricho_vajilla;
+    this->numerodeturno = numerodeturno;
+    this->pararegalar = pararegalar;
 }
 
-/**
- * @param mimetodo
- * @return void
- */
+
 void Cliente::elegirmetodo(metododepago mimetodo) {
     return;
 }
 
-/**
- * @param miprod
- * @return void
- */
+
 void Cliente::elegirprod(producto miprod) {
     return;
 }
 
-/**
- * @return bool
- */
+
 bool Cliente::get_capricho() {
-    return false;
+    return this->capricho_vajilla;
 }
 
-/**
- * @param bool
- * @return void
- */
-void Cliente::set_capricho(void bool) {
+
+void Cliente::set_capricho(bool) {
     return;
 }
 
-/**
- * @return int
- */
-int Cliente::get_cantcapricho() {
-    return 0;
+
+unsigned int Cliente::get_cantcapricho() {
+    return this->cant_caprichos_vaj;
 }
 
-/**
- * @param int
- * @return void
- */
-void Cliente::set_cantcapricho(void int) {
+
+void Cliente::set_cantcapricho(unsigned int  cant_caprcho_vaj) {
     return;
 }
 
-/**
- * @return u_int
- */
-u_int Cliente::get_numdeturno() {
-    return null;
+
+unsigned int Cliente::get_numdeturno() {
+    return this->numerodeturno;
 }
 
-/**
- * @param u_int
- * @return void
- */
-void Cliente::set_numdeturno(void u_int) {
+void Cliente::set_numdeturno(unsigned int) {
     return;
 }
 
-/**
- * @param bool
- * @return void
- */
-void Cliente::set_regalo(void bool) {
+
+void Cliente::set_regalo(bool) {
     return;
 }
 
-/**
- * @return bool
- */
 bool Cliente::get_regalo() {
-    return false;
+    return this->pararegalar;
 }
 
-void Cliente::Cliente() {
+Cliente::~Cliente() {
 
 }

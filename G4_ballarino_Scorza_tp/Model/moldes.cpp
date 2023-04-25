@@ -1,42 +1,24 @@
-/**
- * Project Untitled
- */
 
+//ver
 
 #include "moldes.h"
 
-/**
- * moldes implementation
- */
 
-
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param tipo_molde
- */
-void moldes::moldes(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration tipo_molde ) {
+moldes::moldes(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_molde tippo_molde)
+    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-/**
- * @return tipo_molde
- */
+
 tipo_molde moldes::get_molde() {
     return null;
 }
 
-/**
- * @param tipo_molde
- * @return void
- */
-void moldes::set_molde(void tipo_molde) {
+
+void moldes::set_molde(tipo_molde) {
     return;
 }
 
-void moldes::moldes() {
+moldes::~moldes() {
 
 }

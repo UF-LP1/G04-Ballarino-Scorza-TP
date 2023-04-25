@@ -1,101 +1,72 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "producto.h"
 
-/**
- * producto implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod
- */
-void producto::producto(string marca , string color, string tamanio , string precio , u_int cant_prod ) {
 
+producto::producto(string marca, string color, string tamanio, string precio, unsigned int cant_prod) {
+    this->marca = marca;
+    this->color = color;
+    this->tamanio = tamanio;
+    this->cant_prod = cant_prod;
 }
 
-/**
- * @return string
- */
+
 string producto::get_marca() {
-    return "";
+    return this->marca;
 }
 
-/**
- * @return string
- */
+
 string producto::get_color() {
-    return "";
+    return this->color;
 }
 
-/**
- * @return string
- */
+
 string producto::get_tamanio() {
-    return "";
+    return this->tamanio;
 }
 
-/**
- * @return string
- */
+
 string producto::get_precio() {
-    return "";
+    return this->precio;
 }
 
-/**
- * @return u_int
- */
-u_int producto::get_cantprod() {
-    return null;
+
+unsigned int producto::get_cantprod() {
+    return this->cant_prod;
 }
 
-/**
- * @param string
- * @return void
- */
-void producto::set_marca(void string) {
+
+void producto::set_marca(string marca) {
+    this->marca = marca;
     return;
 }
 
-/**
- * @param string
- * @return void
- */
-void producto::sert_color(void string) {
+
+void producto::set_color(string color) {
+    this->color = color;
     return;
 }
 
-/**
- * @param string
- * @return void
- */
-void producto::set_tama(void string) {
+
+void producto::set_tama(string tamanio) {
+    this->tamanio = tamanio;
     return;
 }
 
-/**
- * @param string
- * @return void
- */
-void producto::set_precio(void string) {
+
+void producto::set_precio(string precio) {
+    this->precio = precio;
     return;
 }
 
-/**
- * @param u_int
- * @return void
- */
-void producto::set_cantprod(void u_int) {
+void producto::set_cantprod(unsigned int cant_prod) {
+    this->cant_prod = cant_prod;
     return;
 }
 
-void producto::producto() {
+producto::~producto() {
 
 }

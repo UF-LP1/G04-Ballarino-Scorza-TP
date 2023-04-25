@@ -1,69 +1,46 @@
-/**
- * Project Untitled
- */
 
 
 #include "persona.h"
 
-/**
- * persona implementation
- */
 
-
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI
- */
-void persona::persona(string nombre , char sexo , string DNI ) {
-
+persona::persona(string nombre, char sexo, string DNI) {
+    this->nombre = nombre;
+    this->sexo = sexo;
+    this->DNI = DNI;
 }
 
-/**
- * @return string
- */
+
 string persona::get_nombre() {
-    return "";
+    return nombre;
 }
 
-/**
- * @param string
- * @return void
- */
-void persona::set_nombre(void string) {
+
+void persona::set_nombre(string nombre) {
+    this->nombre = nombre;
     return;
 }
 
-/**
- * @return char
- */
+
 char persona::get_sexo() {
-    return '0';
+    return sexo;
 }
 
-/**
- * @param char
- * @return void
- */
-void persona::set_sexo(void char) {
+void persona::set_sexo(char sexo) {
+    this->sexo = sexo;
     return;
 }
 
-/**
- * @return string
- */
+
 string persona::get_dni() {
-    return "";
+    return DNI;
 }
 
-/**
- * @param string
- * @return void
- */
-void persona::set_dni(void string) {
+
+void persona::set_dni(string DNI) {
+    this->DNI = DNI;
     return;
 }
 
-void persona::persona() {
+persona::~persona() {
 
 }

@@ -1,62 +1,34 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Vajilla_descartables.h"
 
-/**
- * Vajilla_descartables implementation
- */
 
-
-void Vajilla_descartables::Operation1() {
+Vajilla_descartables::Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material)
+    :producto(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param decoraciionvajillas
- * @param material
- */
-void Vajilla_descartables::vajilla_descartables(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration decoraciionvajillas, string material ) {
 
-}
-
-/**
- * @return decoracionvajillas
- */
-decoracionvajillas Vajilla_descartables::get_deco() {
+decoracionvajillas Vajilla_descartables::get_deco() {//enum
     return null;
 }
 
-/**
- * @param decoracionvajillas
- * @return void
- */
-void Vajilla_descartables::set_deco(void decoracionvajillas) {
+/
+void Vajilla_descartables::set_deco(decoracionvajillas) {
     return;
 }
 
-/**
- * @return string
- */
+
 string Vajilla_descartables::get_material() {
     return "";
 }
 
-/**
- * @param string
- * @return void
- */
+
 void Vajilla_descartables::set_material(void string) {
     return;
 }
 
-void Vajilla_descartables::vajilla_descartable() {
+Vajilla_descartables::~vajilla_descartable() {
 
 }

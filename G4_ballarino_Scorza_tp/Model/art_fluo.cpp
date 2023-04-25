@@ -1,42 +1,23 @@
-/**
- * Project Untitled
- */
-
-
 #include "art_fluo.h"
 
-/**
- * art_fluo implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param pilas
- */
-void art_fluo::art_fluo(string marca , string color, string tamanio , string precio , u_int cant_prod , bool pilas ) {
 
+art_fluo::art_fluo(string marca, string color, string tamanio, string precio, unsigned int cant_prod, bool pilas)
+    :cotillon(marca, color, tamanio, precio, cant_prod) {
+    this->pilas = pilas;
 }
 
-/**
- * @return bool
- */
+
 bool art_fluo::get_pilas() {
-    return false;
+    return this->pilas;
 }
 
-/**
- * @param bool
- * @return void
- */
-void art_fluo::set_pilas(void bool) {
+
+void art_fluo::set_pilas(bool pilas) {
     return;
 }
 
-void art_fluo::art_fluo() {
+art_fluo::~art_fluo() {
 
 }

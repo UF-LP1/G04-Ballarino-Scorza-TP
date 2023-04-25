@@ -1,42 +1,21 @@
-/**
- * Project Untitled
- */
-
 
 #include "mascara.h"
 
-/**
- * mascara implementation
- */
-
-
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param completa
- */
-void mascara::mascara(string marca , string color, string tamanio , string precio , u_int cant_prod , bool completa ) {
+mascara::mascara(string marca, string color, string tamanio, string precio, unsigned int  cant_prod, bool completa)
+    :cotillon(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-/**
- * @return bool
- */
+
 bool mascara::get_comp() {
-    return false;
+    return this->completa;
 }
 
-/**
- * @param bool
- * @return void
- */
-void mascara::set_comp(void bool) {
+
+void mascara::set_comp(bool completa) {
     return;
 }
 
-void mascara::mascara() {
+mascara::~mascara() {
 
 }

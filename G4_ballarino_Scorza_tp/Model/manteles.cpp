@@ -1,44 +1,24 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "manteles.h"
 
-/**
- * manteles implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param decoraciionvajillas
- * @param material 
- * @param impermeable
- */
-void manteles::manteles(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration decoraciionvajillas, string material , bool impermeable ) {
-
+manteles::manteles(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, bool impermeable)
+    :Vajilla_descartables(marca, color, tamanio, precio, cant_prod, decoracionvajillas, material) {
+    this->impermeable = impermeable;
 }
 
-/**
- * @param bool
- * @return void
- */
-void manteles::set_impermeable(void bool) {
+
+void manteles::set_impermeable(bool impermeable) {
     return;
 }
 
-/**
- * @return bool
- */
 bool manteles::get_impermeable() {
-    return false;
+    return this->impermeable;
 }
 
-void manteles::manteles() {
+manteles::~manteles() {
 
 }

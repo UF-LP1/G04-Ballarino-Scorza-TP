@@ -1,26 +1,11 @@
-/**
- * Project Untitled
- */
-
-
 #include "cotillon.h"
 
-/**
- * cotillon implementation
- */
 
-
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod
- */
-void cotillon::cotillon(string marca , string color, string tamanio , string precio , u_int cant_prod ) {
+cotillon::cotillon(string marca, string color, string tamanio, string precio, unsigned int cant_prod)
+	:producto(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-void cotillon::cotillon() {
+cotillon::~cotillon() {
 
 }

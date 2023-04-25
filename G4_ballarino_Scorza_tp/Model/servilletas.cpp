@@ -1,44 +1,23 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "servilletas.h"
 
-/**
- * servilletas implementation
- */
 
-
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param decoraciionvajillas
- * @param material 
- * @param grosor
- */
-void servilletas::servilletas(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration decoraciionvajillas, string material , string grosor ) {
-
+servilletas::servilletas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, string grosor)
+    :Vajilla_descartables(marca, color, tamanio, precio, cant_prod, decoracionvajillas, material) {
+    this->grosor = grosor;
 }
 
-/**
- * @return string
- */
+
 string servilletas::get_gro() {
-    return "";
+    return this->grosor;
 }
 
-/**
- * @param string
- * @return void
- */
-void servilletas::set_gro(void string) {
+void servilletas::set_gro(string grosor) {
     return;
 }
 
-void servilletas::servilletas() {
+servilletas::~servilletas() {
 
 }

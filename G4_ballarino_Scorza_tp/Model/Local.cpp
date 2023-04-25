@@ -1,75 +1,52 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Local.h"
 
-/**
- * Local implementation
- */
 
 
-/**
- * @param Horariosdias_hab
- * @param Horariosab
- * @param Nombre
- */
-void Local::Local(const string Horariosdias_hab, const string Horariosab, const string Nombre) {
 
+Local::Local(const string Horariosdias_hab, const string Horariosab, const string Nombre, string direccion, string Contacto)
+    : Horariosdias_hab(Horariosdias_hab), Horariosab(Horariosab), Nombre(Nombre) {
+    this->direccion = direccion;
+    this->Contacto = Contacto;
 }
 
-/**
- * @return const string
- */
+
 const string Local::get_horariodias() {
-    return null;
+    return this->Horariosdias_hab;
 }
 
-/**
- * @return const string
- */
+
 const string Local::get_horasab() {
-    return null;
+    return this->Horariosab;
 }
 
-/**
- * @return const string
- */
+
 const string Local::get_nombre() {
-    return null;
+    return this->Nombre;
 }
 
-/**
- * @return string
- */
+
 string Local::get_direccion() {
-    return "";
+    return this->direccion;
 }
 
-/**
- * @return string
- */
+
 string Local::get_contacto() {
-    return "";
+    return this->Contacto;
 }
 
-/**
- * @param string
- * @return void
- */
-void Local::set_direccion(void string) {
+
+void Local::set_direccion(string direccion) {
     return;
 }
 
-/**
- * @param string
- * @return void
- */
-void Local::set_contacto(void string) {
+
+void Local::set_contacto(string Contacto) {
     return;
 }
 
-void Local::Local() {
+Local::~Local() {
 
 }

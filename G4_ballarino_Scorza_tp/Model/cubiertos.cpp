@@ -1,44 +1,27 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "cubiertos.h"
 
-/**
- * cubiertos implementation
- */
 
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param decoraciionvajillas
- * @param material 
- * @param tipo_cub
- */
-void cubiertos::cubiertos(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration decoraciionvajillas, string material , enumeration tipo_cub) {
+
+
+cubiertos::cubiertos(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, tipo_cub tipo_cubi)
+    :Vajilla_descartables(marca, color, tamanio, precio, cant_prod, decoracionvajillas, material) {
 
 }
 
-/**
- * @return tipo_cub
- */
+
 tipo_cub cubiertos::get_tipocub() {
     return null;
 }
 
-/**
- * @param tipo_cub
- * @return void
- */
-void cubiertos::set_tipocu(void tipo_cub) {
+
+void cubiertos::set_tipocu(tipo_cub tipo_cubi) {
     return;
 }
 
-void cubiertos::cubiertos() {
+cubiertos::~cubiertos() {
 
 }

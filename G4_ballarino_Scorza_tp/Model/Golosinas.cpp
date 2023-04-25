@@ -1,66 +1,38 @@
-/**
- * Project Untitled
- */
 
 
 #include "Golosinas.h"
 
-/**
- * Golosinas implementation
- */
 
 
-void Golosinas::Operation1() {
 
+
+
+Golosina::Golosina(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string informe_nutricional, string sabor)
+    :producto(marca, color, tamanio, precio, cant_prod) {
+    this->informe_nutricional = informe_nutricional;
+    this->sabor = sabor;
 }
 
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param informe nutricional 
- * @param sabor
- */
-void Golosinas::Golosina(string marca , string color, string tamanio , string precio , u_int cant_prod , string informe nutricional , string sabor) {
 
+string Golosina::get_informe() {
+    return this->informe_nutricional;
 }
 
-/**
- * @return string
- */
-string Golosinas::get_informe() {
-    return "";
-}
 
-/**
- * @param string
- * @return void
- */
-void Golosinas::set_informe(void string) {
+void Golosina::set_informe(string) {
     return;
 }
 
-void Golosinas::Operation2() {
 
+
+string Golosina::get_sabor() {
+    return this->sabor;
 }
 
-/**
- * @return string
- */
-string Golosinas::get_sabor() {
-    return "";
-}
-
-/**
- * @param string
- * @return void
- */
-void Golosinas::set_sabor(void string) {
+void Golosina::set_sabor(string) {
     return;
 }
 
-void Golosinas::Golosina() {
+Golosina::~Golosina() {
 
 }

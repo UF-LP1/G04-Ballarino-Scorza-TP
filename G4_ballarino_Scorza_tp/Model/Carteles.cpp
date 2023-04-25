@@ -1,42 +1,21 @@
-/**
- * Project Untitled
- */
-
-
 #include "Carteles.h"
 
-/**
- * Carteles implementation
- */
 
-
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param frase
- */
-void Carteles::Carteles(string marca , string color, string tamanio , string precio , u_int cant_prod , string frase ) {
-
+Carteles::Carteles(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string frase)
+    :cotillon(marca, color, tamanio, precio, cant_prod) {
+    this->frase = frase;
 }
 
-/**
- * @return string
- */
+
 string Carteles::get_frase() {
-    return "";
+    return this->frase;
 }
 
-/**
- * @param string
- * @return void
- */
-void Carteles::set_frase(void string) {
+
+void Carteles::set_frase(string frase) {
     return;
 }
 
-void Carteles::Carteles() {
+Carteles::~Carteles() {
 
 }
