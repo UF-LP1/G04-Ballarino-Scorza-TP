@@ -1,7 +1,3 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _VAJILLA_DESCARTABLES_H
 #define _VAJILLA_DESCARTABLES_H
@@ -9,41 +5,24 @@
 #include "producto.h"
 
 
-class Vajilla_descartables: public producto {
-public: 
-    
-void Operation1();
-    
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param decoraciionvajillas
- * @param material
- */
-void vajilla_descartables(string marca , string color, string tamanio , string precio , u_int cant_prod , enumeration decoraciionvajillas, string material );
-    
-decoracionvajillas get_deco();
-    
-/**
- * @param decoracionvajillas
- */
-void set_deco(void decoracionvajillas);
-    
-string get_material();
-    
-/**
- * @param string
- */
-void set_material(void string);
-protected: 
-    
-void vajilla_descartable();
-private: 
-    enumeration decoracionvajillas;
+class Vajilla_descartables : public producto {
+protected:
+    enum class dec_vajillas { superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas };
     string material;
+public:
+
+    Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material);
+
+    dec_vajillas get_deco();
+
+    void set_deco(dec_vajillas decoracionvajillas);
+
+    string get_material();
+
+    void set_material(string material);
+
+    ~Vajilla_descartables();
+
 };
 
-#endif //_VAJILLA_DESCARTABLES_H
+#endif 

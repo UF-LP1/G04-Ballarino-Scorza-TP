@@ -1,34 +1,28 @@
-/**
- * Project Untitled
- */
-
 
 #ifndef _METODODEPAGO_H
 #define _METODODEPAGO_H
 
+#include <string>
+#include<iostream>
+using namespace std;
+
+
 class Metododepago {
-public: 
-    
-void pagarporadelantado();
-    
-enum get_metodo();
-    
-/**
- * @param metodo
- */
-void Metododepago(enumeration metodo );
-    
-metodo get_metp();
-    
-/**
- * @param metodo
- */
-void set_metp(void metodo);
-protected: 
-    
-void Metododepago();
-private: 
-    enumeration metodo;
+private:
+    enum class metodo { efectivo, debito, credito, app };
+public:
+    Metododepago(metodo met_pag);
+    void pagarporadelantado();
+
+    metodo get_metod();
+
+
+
+    void set_metp(metodo met_pag);
+
+
+    ~Metododepago();
+
 };
 
-#endif //_METODODEPAGO_H
+#endif 

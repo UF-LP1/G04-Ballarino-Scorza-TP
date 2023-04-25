@@ -1,6 +1,4 @@
-/**
- * Project Untitled
- */
+
 
 
 #ifndef _GOLOSINAS_H
@@ -9,43 +7,27 @@
 #include "producto.h"
 
 
-class Golosinas: public producto {
-public: 
-    
-void Operation1();
-    
-/**
- * @param marca 
- * @param color
- * @param tamanio 
- * @param precio 
- * @param cant_prod 
- * @param informe nutricional 
- * @param sabor
- */
-void Golosina(string marca , string color, string tamanio , string precio , u_int cant_prod , string informe nutricional , string sabor);
-    
-string get_informe();
-    
-/**
- * @param string
- */
-void set_informe(void string);
-    
-void Operation2();
-    
-string get_sabor();
-    
-/**
- * @param string
- */
-void set_sabor(void string);
-protected: 
-    
-void Golosina();
-private: 
-    string informe nutricional;
+class Golosina : public producto {
+private:
+    string informe_nutricional;
     string sabor;
+public:
+
+
+    Golosina(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string informe_nutricional, string sabor);
+
+    string get_informe();
+
+    void set_informe(string informe);
+
+
+    string get_sabor();
+
+    void set_sabor(string sabor);
+
+
+    ~Golosina();
+
 };
 
-#endif //_GOLOSINAS_H
+#endif 

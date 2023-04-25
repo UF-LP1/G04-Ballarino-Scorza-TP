@@ -1,48 +1,38 @@
-/**
- * Project Untitled
- */
+
 
 
 #ifndef _PERSONA_H
 #define _PERSONA_H
+#include<iostream>
+#include<string>
+using namespace std;
+
 
 class persona {
-public: 
-    
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI
- */
-void persona(string nombre , char sexo , string DNI );
-    
-string get_nombre();
-    
-/**
- * @param string
- */
-void set_nombre(void string);
-    
-char get_sexo();
-    
-/**
- * @param char
- */
-void set_sexo(void char);
-    
-string get_dni();
-    
-/**
- * @param string
- */
-void set_dni(void string);
-protected: 
-    
-void persona();
-private: 
-    string nombre;
+public:
+
+
+    persona(std::string nombre, char sexo, std::string DNI);
+
+    std::string get_nombre();
+
+    void set_nombre(std::string nombre);
+
+    char get_sexo();
+
+    void set_sexo(char sexo);
+
+    std::string get_dni();
+
+    void set_dni(std::string dni);
+
+
+    ~persona();
+
+protected:
+    std::string nombre;
     char sexo;
-    string DNI;
+    std::string DNI;
 };
 
-#endif //_PERSONA_H
+#endif

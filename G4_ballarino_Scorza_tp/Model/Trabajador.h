@@ -1,53 +1,36 @@
-/**
- * Project Untitled
- */
+
 
 
 #ifndef _TRABAJADOR_H
 #define _TRABAJADOR_H
 
 #include "persona.h"
+#include<string>
+#include<iostream>
 
-
-class Trabajador: public persona {
-public: 
-    u_int sueldo;
+class Trabajador : public persona {
+protected:
+    unsigned int sueldo;
     string horas;
     string dias_vacas;
-    
-u_int get_sueldo();
-    
-/**
- * @param u_int
- */
-void set_sueldo(void u_int);
-    
-string get_horas();
-    
-/**
- * @param string
- */
-void set_horas(void string);
-    
-string get_diasv();
-    
-/**
- * @param string
- */
-void set_diasv(void string);
-    
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI 
- * @param sueldo 
- * @param horas 
- * @param dias_vacas
- */
-void Trabajador(string nombre , char sexo , string DNI , u_int sueldo , string horas , string dias_vacas );
-protected: 
-    
-void Trabajador();
+
+public:
+    Trabajador(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas);
+
+    unsigned int get_sueldo();
+
+    void set_sueldo(unsigned int sueldo);
+
+    string get_horas();
+
+    void set_horas(string horas);
+
+    string get_diasv();
+
+
+    void set_diasv(string dias_vacas);
+
+    ~Trabajador();
 };
 
-#endif //_TRABAJADOR_H
+#endif 

@@ -1,75 +1,57 @@
-/**
- * Project Untitled
- */
+
 
 
 #include "Encargado.h"
 
-/**
- * Encargado implementation
- */
-
-
-/**
- * @param nombre 
- * @param sexo 
- * @param DNI 
- * @param sueldo 
- * @param horas
- * @param dias_vacas
- * @param area
- */
-void Encargado::Encargado(string nombre , char sexo , string DNI , u_int sueldo , string horas, string dias_vacas, string area) {
+Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
+    :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
 
 }
+/*FUNCION QUE SE ENTREGA Hola cyndy, como bien dice el titulo, esta funcion es para que el encargado busque
+lo que quiere comprar el cliente, la idea es que recibe la marca y la cantidad requerida, y el encargado busca
+a traves del objeto de la clase producto "listap" encuentra lo pedido. Para esto utilizamos el contenedor dinamico
+lista y luego a partir del iterador it, recorremos hasta que se encuentren.
 
-/**
- * @param lista producto
- * @param string marca
- * @param u_int cantidad
- * @return bool
- */
-bool Encargado::buscar_pedido_cliente(void lista producto, void string marca, void u_int cantidad) {
+*/
+bool Encargado::buscar_pedido_cliente(producto listap, string marca, unsigned int cantidad) {
+    std::list<producto>::iterator it;
+    it = listap.begin();// iterador para que aborde el primer elemento de la lista
+
+
+    while (it != listap.end())//lista end devuelve iterador que se dirige a la ubicacion que sigue al ultimo elemento de la lista
+    {
+        if (it->marca == marca && it->cant_prod == cantidad)//impongo condicion
+            return true;
+
+        it++;
+    };
     return false;
 }
-
-/**
- * @param micliente
- * @return void
- */
+float Encargado::
 void Encargado::envolverregalo(cliente micliente) {
     return;
 }
 
-/**
- * @return void
- */
+
 void Encargado::abrirlocal() {
     return;
 }
 
-/**
- * @return void
- */
+
 void Encargado::cerrarlocal() {
     return;
 }
 
-/**
- * @param string
- * @return void
- */
-void Encargado::set_area(void string) {
+
+void Encargado::set_area(string area) {
     return;
 }
 
-/**
- * @return string
- */
+
 string Encargado::get_area() {
-    return "";
+    return this->area;
 }
 
-void Encargado::Encargado() {
+Encargado::~Encargado() {
 
 }
