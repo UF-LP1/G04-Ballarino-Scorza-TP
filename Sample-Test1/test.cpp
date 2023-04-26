@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "CppUnitTest.h"
+
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -15,7 +15,7 @@ namespace funcion_buscar_producto
 	TEST_CLASS(funcion_buscar_producto)
 	{
 	public:
-		
+
 		TEST_METHOD(TestMethod1)
 		{
 			//creo lista de clase productos
@@ -37,7 +37,7 @@ namespace funcion_buscar_producto
 			listaprod.push_back(globito);
 			listaprod.push_back(golo);
 			listaprod.push_back(masc);
-			
+
 			Encargado encarg1;
 			encarg1.set_nombre("mike");
 
