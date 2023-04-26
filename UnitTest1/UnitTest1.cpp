@@ -21,17 +21,17 @@ namespace funcion_buscar_producto
 		{
 			
 			list<producto>listaprod;
-			Velas miVela("obelisco", "color", "tamaño", "precio", 19, "parafina");
+			Velas miVela("obelisco", "marron", "15cm", "200pe", 19, "cera");
 			
-			globos miGlobo("de la b", "blanco", "chiquitisimo", "precio", 10, true);
+			globos miGlobo("de la b", "blanco", "chiquitisimo", "100p", 10, true);
 			
-			Golosina miGolosina("arcor", "color", "tamaño", "precio", 5, "informe nutricional", "sabor");
+			Golosina miGolosina("arcor", "rojo", "10g", "10p", 5, "10gproteina", "frambuesa");
 			
 			listaprod.push_back(miVela);
 			listaprod.push_back(miGlobo);
 			listaprod.push_back(miGolosina);
 			
-			Encargado encargado("Juan Perez", 'M', "12345678", 10000, "8hs", "15 dias", "Ventas");
+			Encargado encargado("Mike", 'M', "30454433", 324242, "8hs", "15 dias", "Ventas");
 
 			bool respuesta = encargado.buscar_pedido_cliente(listaprod, "arcor", 5);
 
