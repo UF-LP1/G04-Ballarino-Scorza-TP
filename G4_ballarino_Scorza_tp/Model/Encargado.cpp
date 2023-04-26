@@ -13,8 +13,9 @@ a traves del objeto de la clase producto "listap" encuentra lo pedido. Para esto
 lista y luego a partir del iterador it, recorremos hasta que se encuentren.
 
 */
-bool Encargado::buscar_pedido_cliente(producto listap, string marca, unsigned int cantidad) {
+bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad) {
     std::list<producto>::iterator it;
+    
     it = listap.begin();// iterador para que aborde el primer elemento de la lista
 
 

@@ -40,7 +40,7 @@ public:
 
     ~producto();
     ;
-protected:
+public:
     string marca;
     string color;
     string tamanio;

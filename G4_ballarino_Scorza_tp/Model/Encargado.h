@@ -16,9 +16,9 @@ private:
 public:
     Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area);
 
-    bool buscar_pedido_cliente(producto listap, string marca, unsigned int cantidad);
+    bool buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad);
 
-    void envolverregalo(cliente micliente);
+   // void envolverregalo(cliente micliente);
 
     void abrirlocal();
 
