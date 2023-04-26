@@ -3,7 +3,7 @@
 #define _GLOBOS_H
 
 #include "producto.h"
-
+#include <string>
 
 class globos : public producto {
 public:
