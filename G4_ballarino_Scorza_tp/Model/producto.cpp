@@ -6,7 +6,7 @@
 
 
 
-producto::producto(string marca, string color, string tamanio, string precio, unsigned int cant_prod) {
+producto::producto(string marca, string color, string tamanio, unsigned int precio, unsigned int cant_prod) {
     this->marca = marca;
     this->color = color;
     this->tamanio = tamanio;

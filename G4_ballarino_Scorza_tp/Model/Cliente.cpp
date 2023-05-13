@@ -1,7 +1,8 @@
 
 
 #include "Cliente.h"
-
+#include <string>
+using namespace std;
 
 Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,
     bool pararegalar) :persona(nombre, sexo, DNI) {

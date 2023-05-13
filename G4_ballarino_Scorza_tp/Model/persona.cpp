@@ -1,6 +1,7 @@
 
 
 #include "persona.h"
+#include<string>
 
 
 persona::persona(string nombre, char sexo, string DNI) {

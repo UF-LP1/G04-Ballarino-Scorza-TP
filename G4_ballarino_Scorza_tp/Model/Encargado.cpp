@@ -2,6 +2,7 @@
 
 
 #include "Encargado.h"
+#include <cmath>
 
 Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
@@ -13,7 +14,7 @@ a traves del objeto de la clase producto "listap" encuentra lo pedido. Para esto
 lista y luego a partir del iterador it, recorremos hasta que se encuentren.
 
 */
-bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad) {
+bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar) {
     std::list<producto>::iterator it;
     
     it = listap.begin();// iterador para que aborde el primer elemento de la lista
@@ -23,25 +24,22 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
     {
         if (it->marca == marca && it->cant_prod == cantidad)//impongo condicion
             return true;
-
+          cobrarproducto(*it);
+        
         it++;
     };
     return false;
 }
-float Encargado::
+void Encargado::cobrarproducto(producto& prod) {
+    float precio;
+        precio = prod.precio * prod.cant_prod;
+    
+    cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
+}
 void Encargado::envolverregalo(cliente micliente) {
     return;
 }
 
-
-void Encargado::abrirlocal() {
-    return;
-}
-
-
-void Encargado::cerrarlocal() {
-    return;
-}
 
 
 void Encargado::set_area(string area) {

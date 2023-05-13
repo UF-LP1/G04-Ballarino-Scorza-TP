@@ -12,27 +12,27 @@ class persona {
 public:
 
 
-    persona(std::string nombre, char sexo, std::string DNI);
+    persona(string nombre, char sexo, string DNI);
 
-    std::string get_nombre();
+    string get_nombre();
 
-    void set_nombre(std::string nombre);
+    void set_nombre(string nombre);
 
     char get_sexo();
 
     void set_sexo(char sexo);
 
-    std::string get_dni();
+    string get_dni();
 
-    void set_dni(std::string dni);
+    void set_dni(string dni);
 
 
     ~persona();
 
 protected:
-    std::string nombre;
+    string nombre;
     char sexo;
-    std::string DNI;
+    string DNI;
 };
 
 #endif
