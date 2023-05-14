@@ -3,7 +3,7 @@
 
 #include "Encargado.h"
 #include <cmath>
-
+#include "Vajilla_descartables.h"
 Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
 
@@ -35,9 +35,14 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
 
 void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj) {
     float precio;
-    if (prodcapricho_vajilla)
+    if (Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(&prod))
     {
-
+        if (capricho_vajilla) {
+            precio = stof(prod.precio) * cant_caprichos_vaj;
+            cout << "cobro el 30%" << endl;
+        }
+        else
+            precio = stof(prod.precio) * prod.cant_prod;//el problema que veo es si tengo un cliente que compra mas de una vajillas, y no todas con capricho
     }
     else
     {

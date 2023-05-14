@@ -25,7 +25,7 @@ public:
 
 
 
-    void set_marca(string marca);
+   virtual void set_marca(string marca)=0;
 
 
     void set_color(string color);
@@ -40,7 +40,7 @@ public:
     void set_cantprod(unsigned int cant_prod);
 
 
-    ~producto();
+   virtual ~producto();
     
 public:
     string marca;
