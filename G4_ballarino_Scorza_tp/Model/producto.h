@@ -25,7 +25,7 @@ public:
 
 
 
-   virtual void set_marca(string marca)=0;
+   virtual void set_marca(string marca)=0;// debemos poner al menos un mertodo  virtual para convertir la clase en abstracta y asi poder hacer dinamic cast
 
 
     void set_color(string color);

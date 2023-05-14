@@ -10,7 +10,7 @@
 
 class Encargado : public Trabajador {
 private:
-    
+    static float preciototal;
    string area;
 
 public:

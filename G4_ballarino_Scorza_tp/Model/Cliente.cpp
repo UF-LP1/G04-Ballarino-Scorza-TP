@@ -15,14 +15,9 @@ Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, un
 }
 
 
-void Cliente::elegirmetodo(metododepago mimetodo) {
-    return;
-}
 
 
-void Cliente::elegirprod(producto miprod) {
-    return;
-}
+
 
 
 bool Cliente::get_capricho() {

@@ -9,17 +9,13 @@ using namespace std;
 
 class Metododepago {
 private:
-    enum class metodo { efectivo, debito, credito, app };
+    enum  metodo { efectivo, debito, credito, app };
+    metodo mpago;
 public:
-    Metododepago(metodo met_pag);
-    void pagarporadelantado();
+    Metododepago(metodo mpago);
+    
 
     metodo get_metod();
-
-
-
-    void set_metp(metodo met_pag);
-
 
     ~Metododepago();
 

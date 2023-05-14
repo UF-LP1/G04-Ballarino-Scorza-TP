@@ -8,7 +8,7 @@ Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, 
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
 
 }
-
+float Encargado::preciototal = 0;
 /*FUNCION QUE SE ENTREGA Hola cyndy, como bien dice el titulo, esta funcion es para que el encargado busque
 lo que quiere comprar el cliente, la idea es que recibe la marca y la cantidad requerida, y el encargado busca
 a traves del objeto de la clase producto "listap" encuentra lo pedido. Para esto utilizamos el contenedor dinamico
@@ -34,22 +34,21 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
 }
 
 void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj) {
-    float precio;
-    if (Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(&prod))
+    
+    if (Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(&prod))//no nos deja poner capricho vajilla dentro del if
     {
         if (capricho_vajilla) {
-            precio = stof(prod.precio) * cant_caprichos_vaj;
-            cout << "cobro el 30%" << endl;
-        }
-        else
-            precio = stof(prod.precio) * prod.cant_prod;//el problema que veo es si tengo un cliente que compra mas de una vajillas, y no todas con capricho
-    }
-    else
-    {
-        precio = stof(prod.precio) * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
+            Encargado::preciototal = stof(prod.precio) * cant_caprichos_vaj;//no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
 
-        cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
+            cout << "debera pagar por adelantado:" <<Encargado::preciototal*0.3<<"$"<< endl;
+
+        }
     }
+   
+    
+        Encargado::preciototal += stof(prod.precio) * prod.cant_prod; 
+        cout << "El precio  " << prod.marca << " es: $" << Encargado::preciototal << endl;
+    
     }
 
 void Encargado::envolver_regalo(producto& prod, bool pararegalar) {

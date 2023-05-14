@@ -7,13 +7,12 @@ public:
 
     Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar);
 
-    void elegirmetodo(metododepago mimetodo);
 
     bool get_capricho();
 
     void set_capricho(bool capricho);
 
-    int get_cantcapricho();
+   unsigned int get_cantcapricho();
 
     void set_cantcapricho(unsigned int cant_caprcho_vaj);
 
