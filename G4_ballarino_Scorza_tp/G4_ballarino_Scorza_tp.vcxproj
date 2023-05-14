@@ -143,7 +143,6 @@
     <ClCompile Include="Model\Local.cpp" />
     <ClCompile Include="Model\manteles.cpp" />
     <ClCompile Include="Model\mascara.cpp" />
-    <ClCompile Include="Model\Metododepago.cpp" />
     <ClCompile Include="Model\moldes.cpp" />
     <ClCompile Include="Model\papelpicado.cpp" />
     <ClCompile Include="Model\persona.cpp" />
@@ -172,7 +171,6 @@
     <ClInclude Include="Model\Local.h" />
     <ClInclude Include="Model\manteles.h" />
     <ClInclude Include="Model\mascara.h" />
-    <ClInclude Include="Model\Metododepago.h" />
     <ClInclude Include="Model\moldes.h" />
     <ClInclude Include="Model\papelpicado.h" />
     <ClInclude Include="Model\persona.h" />

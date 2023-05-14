@@ -60,9 +60,6 @@
     <ClCompile Include="Model\mascara.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Model\Metododepago.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Model\moldes.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -144,9 +141,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Model\mascara.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Model\Metododepago.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Model\moldes.h">

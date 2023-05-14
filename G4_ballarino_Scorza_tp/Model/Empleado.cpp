@@ -17,11 +17,6 @@ void Empleado::llamarnum(list<Cliente> listac) {
 }
 
 
-void Empleado::recibirticket(cliente micliente) {
-    return;
-}
-
-
 void Empleado::set_especia(string) {
     return;
 }

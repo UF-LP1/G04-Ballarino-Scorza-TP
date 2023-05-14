@@ -1,11 +1,12 @@
 #ifndef _CLIENTE_H
 #define _CLIENTE_H
 #include "persona.h"
+#include"Encargado.h"//incluyo para hacerla friend, asi puedo hacer la funcion buscar pedido cliente y que no me diga que los atributos son inaccesibles
 
 class Cliente : public persona {
 public:
 
-    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar);
+    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar,string formapagar);
 
 
     bool get_capricho();
@@ -24,6 +25,12 @@ public:
 
     bool get_regalo();
 
+    void set_formapagar(string formapagarr);
+    
+    string get_formapagar();
+
+    friend bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente);
+
     ~Cliente();
 
 private:
@@ -36,6 +43,9 @@ private:
     unsigned int cant_caprichos_vaj;//cosideramos que esta cantidad debe estar ya que no es la misma de la de los productos sin de la cantidad de cosas personalizadas, por ejemplo puedo comprar 5 platos pero quiero solo tres con fotos del pepe sand
     unsigned int numerodeturno;
     bool pararegalar;
-};
+    string formapagar;
+    /* creo atributo forma  de pagar que va a recibir metodo de pago, si la forma de pagar que tiene nuestro cliente es igual a alguna de las
+                          alguna de las cuatro manera admitidas, devolvera el metodo de pago para que lo imprima.                                */
+  };
 
 #endif 

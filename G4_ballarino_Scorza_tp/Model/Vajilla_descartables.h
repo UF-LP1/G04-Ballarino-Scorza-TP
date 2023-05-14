@@ -7,7 +7,7 @@
 
 class Vajilla_descartables : public producto {
 protected:
-    enum  dec_vajillas{ superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas };
+    enum  class dec_vajillas{ superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas };// Ponemos ENUM CLASS ya que nos tira la advertencia de "enum type is unscoped,prefer ENUM CLASS over ENUM"
     dec_vajillas decoracionvajillas;
     string material;
 

@@ -19,10 +19,7 @@ public:
      caso, imprimiendo en pantalla. Creemos que no hace falta ordenar la lista porque consideramos que los numeros ya se
      asginan de menor a mayor segun el orden de llegada.
      */
-    void recibirticket(Cliente micliente);
-
-    void mostrarstock();
-
+ 
     void set_especia(std::string especialidad);
 
     std::string get_especia();

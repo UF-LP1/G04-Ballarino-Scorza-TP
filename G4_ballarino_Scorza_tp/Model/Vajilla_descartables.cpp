@@ -9,7 +9,7 @@ Vajilla_descartables::Vajilla_descartables(string marca, string color, string ta
     :producto(marca, color, tamanio, precio, cant_prod) {
     this->material = material;
 }
-enum Vajilla_descartables::dec_vajillas Vajilla_descartables::get_deco() {
+enum class Vajilla_descartables::dec_vajillas Vajilla_descartables::get_deco() {
     return decoracionvajillas;
 }
 

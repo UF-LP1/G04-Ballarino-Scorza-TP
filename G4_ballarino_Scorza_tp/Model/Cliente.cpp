@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno, string marca, unsigned int cantidad, bool pararegalar)
+Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno, string marca, unsigned int cantidad, bool pararegalar,string formapagar)
     :persona(nombre, sexo, DNI) {
     this->cant_caprichos_vaj = cant_caprichos_vaj;
     this->capricho_vajilla = capricho_vajilla;
@@ -12,12 +12,8 @@ Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, un
     this->pararegalar = pararegalar;
     this->cantidad = cantidad;
     this->marca = marca;
+    this->formapagar = formapagar;
 }
-
-
-
-
-
 
 
 bool Cliente::get_capricho() {
@@ -25,7 +21,8 @@ bool Cliente::get_capricho() {
 }
 
 
-void Cliente::set_capricho(bool) {
+void Cliente::set_capricho(bool capricho) {
+    capricho_vajilla =capricho;
     return;
 }
 
@@ -36,6 +33,7 @@ unsigned int Cliente::get_cantcapricho() {
 
 
 void Cliente::set_cantcapricho(unsigned int  cant_caprcho_vaj) {
+    this->cant_caprichos_vaj = cant_caprcho_vaj;
     return;
 }
 
@@ -44,17 +42,27 @@ unsigned int Cliente::get_numdeturno() {
     return this->numerodeturno;
 }
 
-void Cliente::set_numdeturno(unsigned int) {
+void Cliente::set_numdeturno(unsigned int setnum) {
+    numerodeturno = setnum;
     return;
 }
 
 
-void Cliente::set_regalo(bool) {
+void Cliente::set_regalo(bool pararegalar) {
+    this->pararegalar = pararegalar;
     return;
 }
 
 bool Cliente::get_regalo() {
     return this->pararegalar;
+}
+
+void Cliente:: set_formapagar(string formapagarr) {
+    formapagar = formapagarr;
+    return;
+}
+string Cliente::get_formapagar() {
+    return this->formapagar;
 }
 
 Cliente::~Cliente() {
