@@ -11,16 +11,13 @@ Empleado::Empleado(string nombre, char sexo, string DNI, unsigned int sueldo, st
 
 
 void Empleado::llamarnum(list<Cliente> listac) {
+  cout<<""
+
     return;
 }
 
 
 void Empleado::recibirticket(cliente micliente) {
-    return;
-}
-
-
-void Empleado::mostrarstock() {
     return;
 }
 

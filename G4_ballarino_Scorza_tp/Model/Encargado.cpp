@@ -34,7 +34,7 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
 
 void Encargado::cobrarproducto(producto& prod) {
     float precio;
-        precio = stof(prod.precio) * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que lo sobrecargamos
+        precio = stof(prod.precio) * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
     
     cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
 }

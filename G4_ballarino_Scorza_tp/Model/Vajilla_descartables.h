@@ -7,15 +7,14 @@
 
 class Vajilla_descartables : public producto {
 protected:
-    enum class dec_vajillas { superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas };
+   const enum class dec_vajillas{ superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas };
     string material;
+
 public:
 
     Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material);
 
-    dec_vajillas get_deco();
-
-    void set_deco(dec_vajillas decoracionvajillas);
+   const enum class dec_vajillas get_deco();
 
     string get_material();
 
