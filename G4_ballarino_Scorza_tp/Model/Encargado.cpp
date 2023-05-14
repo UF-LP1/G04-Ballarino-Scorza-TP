@@ -31,9 +31,10 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
     };
     return false;
 }
+
 void Encargado::cobrarproducto(producto& prod) {
     float precio;
-        precio = prod.precio * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que lo sobrecargamos
+        precio = stof(prod.precio) * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que lo sobrecargamos
     
     cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
 }

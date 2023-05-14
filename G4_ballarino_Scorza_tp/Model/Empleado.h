@@ -2,7 +2,7 @@
 
 #ifndef _EMPLEADO_H
 #define _EMPLEADO_H
-
+#include<list>
 
 #include "Trabajador.h"
 
@@ -13,7 +13,7 @@ public:
 
     Empleado(std::string nombre, char sexo, std::string DNI, unsigned int sueldo, std::string horas, std::string dias_vacas, std::string especialidad);
 
-    void llamarnum();
+    void llamarnum(list<Cliente> listac);
 
     void recibirticket(cliente micliente);
 

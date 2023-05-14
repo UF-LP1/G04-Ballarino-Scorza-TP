@@ -21,6 +21,8 @@ public:
     string get_precio();
 
     unsigned int get_cantprod();
+    
+
 
 
     void set_marca(string marca);
@@ -48,5 +50,5 @@ public:
     unsigned int cant_prod;
 };
 
-float operator*(const producto& prod, unsigned int cantidad);
+
 #endif 

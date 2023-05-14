@@ -10,7 +10,7 @@ Empleado::Empleado(string nombre, char sexo, string DNI, unsigned int sueldo, st
 }
 
 
-void Empleado::llamarnum() {
+void Empleado::llamarnum(list<Cliente> listac) {
     return;
 }
 

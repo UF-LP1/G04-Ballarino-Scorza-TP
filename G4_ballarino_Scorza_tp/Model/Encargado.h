@@ -21,7 +21,7 @@ public:
     void envolver_regalo(producto &prod,bool pararegalar);
    // void envolverregalo(cliente micliente);
     /* void cobrarproducto(cliente micliente, list<producto> listap) yo reeemplazaria envolver regalo por esta y pondria dentro un if de envolver regalo */
-
+    
 
     void set_area(string area);
 
@@ -30,5 +30,4 @@ public:
     ~Encargado();
 
 };
-
 #endif

@@ -27,7 +27,7 @@ public:
 
     ~Cliente();
 
-private:
+private
     string Nombre;
     string DNI;
     string marca;//agregamos nombre y cantidad al cliente para que en el main de los pase al encargado
