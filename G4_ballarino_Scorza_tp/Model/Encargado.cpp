@@ -14,8 +14,8 @@ lo que quiere comprar el cliente, la idea es que recibe la marca y la cantidad r
 a traves del objeto de la clase producto "listap" encuentra lo pedido. Para esto utilizamos el contenedor dinamico
 lista y luego a partir del iterador it, recorremos hasta que se encuentren.
 */
-
-bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar) {
+// Ahora recibe mucha cosas por el tp3 
+bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar, bool capricho_vajilla, unsigned int cant_caprichos_vaj) {
     std::list<producto>::iterator it;
     
     it = listap.begin();// iterador para que aborde el primer elemento de la lista
@@ -23,21 +23,29 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, string marca, unsig
 
     while (it != listap.end())//lista end devuelve iterador que se dirige a la ubicacion que sigue al ultimo elemento de la lista
     {
-        if (it->marca == marca && it->cant_prod == cantidad)//impongo condicion
-            return true;
-          cobrarproducto(*it);
+        if (it->marca == marca && it->cant_prod >= cantidad)//impongo condicion
+            
+          cobrarproducto(*it, capricho_vajilla, cant_caprichos_vaj);
           envolver_regalo(*it, pararegalar);
         it++;
+        return true;
     };
     return false;
 }
 
-void Encargado::cobrarproducto(producto& prod) {
+void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj) {
     float precio;
+    if (prodcapricho_vajilla)
+    {
+
+    }
+    else
+    {
         precio = stof(prod.precio) * prod.cant_prod; //no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
-    
-    cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
-}
+
+        cout << "El precio del producto " << prod.marca << " es: $" << precio << endl;
+    }
+    }
 
 void Encargado::envolver_regalo(producto& prod, bool pararegalar) {
     if (pararegalar)

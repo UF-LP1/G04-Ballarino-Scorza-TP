@@ -27,13 +27,14 @@ public:
 
     ~Cliente();
 
-private
+private:
+
     string Nombre;
     string DNI;
     string marca;//agregamos nombre y cantidad al cliente para que en el main de los pase al encargado
     unsigned int cantidad;
     bool capricho_vajilla;
-    unsigned int cant_caprichos_vaj;
+    unsigned int cant_caprichos_vaj;//cosideramos que esta cantidad debe estar ya que no es la misma de la de los productos sin de la cantidad de cosas personalizadas, por ejemplo puedo comprar 5 platos pero quiero solo tres con fotos del pepe sand
     unsigned int numerodeturno;
     bool pararegalar;
 };

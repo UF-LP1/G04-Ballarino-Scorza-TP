@@ -16,8 +16,8 @@ private:
 public:
     Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area);
 
-    bool buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar);
-    void cobrarproducto(producto &prod);
+    bool buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar, bool capricho_vajilla, unsigned int cant_caprichos_vaj);
+    void cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj);
     void envolver_regalo(producto& prod, bool pararegalar);
     
 
