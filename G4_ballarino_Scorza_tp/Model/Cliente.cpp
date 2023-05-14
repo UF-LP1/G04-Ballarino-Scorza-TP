@@ -4,12 +4,14 @@
 #include <string>
 using namespace std;
 
-Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,
-    bool pararegalar) :persona(nombre, sexo, DNI) {
+Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno, string marca, unsigned int cantidad, bool pararegalar)
+    :persona(nombre, sexo, DNI) {
     this->cant_caprichos_vaj = cant_caprichos_vaj;
     this->capricho_vajilla = capricho_vajilla;
     this->numerodeturno = numerodeturno;
     this->pararegalar = pararegalar;
+    this->cantidad = cantidad;
+    this->marca = marca;
 }
 
 

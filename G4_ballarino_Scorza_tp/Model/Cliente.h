@@ -5,11 +5,9 @@
 class Cliente : public persona {
 public:
 
-    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno, bool pararegalar);
+    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar);
 
     void elegirmetodo(metododepago mimetodo);
-
-    void elegirprod(producto miprod);
 
     bool get_capricho();
 
@@ -32,6 +30,8 @@ public:
 private:
     string Nombre;
     string DNI;
+    string marca;//agregamos nombre y cantidad al cliente para que en el main de los pase al encargado
+    unsigned int cantidad;
     bool capricho_vajilla;
     unsigned int cant_caprichos_vaj;
     unsigned int numerodeturno;

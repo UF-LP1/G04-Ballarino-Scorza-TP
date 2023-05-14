@@ -18,6 +18,7 @@ public:
 
     bool buscar_pedido_cliente(list<producto> listap, string marca, unsigned int cantidad, bool pararegalar);
     void cobrarproducto(producto &prod);
+    void envolver_regalo(producto &prod,bool pararegalar);
    // void envolverregalo(cliente micliente);
     /* void cobrarproducto(cliente micliente, list<producto> listap) yo reeemplazaria envolver regalo por esta y pondria dentro un if de envolver regalo */
 

@@ -6,10 +6,11 @@
 
 
 
-producto::producto(string marca, string color, string tamanio, unsigned int precio, unsigned int cant_prod) {
+producto::producto(string marca, string color, string tamanio, string precio, unsigned int cant_prod) {
     this->marca = marca;
     this->color = color;
     this->tamanio = tamanio;
+    this->precio = precio;
     this->cant_prod = cant_prod;
 }
 
@@ -70,3 +71,8 @@ void producto::set_cantprod(unsigned int cant_prod) {
 producto::~producto() {
 
 }
+
+
+float operator*(const producto& prod, unsigned int cantidad) {
+    float precio = std::stof(prod.precio) * cantidad;
+    return precio;
