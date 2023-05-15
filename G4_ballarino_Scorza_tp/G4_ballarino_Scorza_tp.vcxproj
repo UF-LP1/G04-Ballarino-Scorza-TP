@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Model\Articulos_de_resposteria.cpp" />
     <ClCompile Include="Model\art_fluo.cpp" />
     <ClCompile Include="Model\Carteles.cpp" />
@@ -154,6 +153,7 @@
     <ClCompile Include="Model\Vajilla_descartables.cpp" />
     <ClCompile Include="Model\vasos.cpp" />
     <ClCompile Include="Model\Velas.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model\Articulos_de_resposteria.h" />
