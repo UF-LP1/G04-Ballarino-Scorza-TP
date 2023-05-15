@@ -20,7 +20,7 @@ private:
    
 
 public:
-    Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area);
+    Encargado(string nombre, char sexo,const string DNI, unsigned int sueldo, string horas, string dias_vacas, string area);
 
     bool  buscar_pedido_cliente(list<producto> listap, Cliente micliente);
     void cobrarproducto(producto& prod,Cliente micliente);

@@ -15,7 +15,7 @@ protected:
     string dias_vacas;
 
 public:
-    Trabajador(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas);
+    Trabajador(string nombre, char sexo, const string DNI, unsigned int sueldo, string horas, string dias_vacas);
 
     unsigned int get_sueldo();
 

@@ -12,7 +12,7 @@ class persona {
 public:
 
 
-    persona(string nombre, char sexo, string DNI);
+    persona(string nombre, char sexo, const string DNI);
 
     string get_nombre();
 
@@ -22,17 +22,14 @@ public:
 
     void set_sexo(char sexo);
 
-    string get_dni();
-
-    void set_dni(string dni);
-
+  const string get_dni();
 
     ~persona();
 
 protected:
     string nombre;
     char sexo;
-    string DNI;
+  const string DNI;
 };
 
 #endif

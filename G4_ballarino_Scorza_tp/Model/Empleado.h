@@ -12,7 +12,7 @@ private:
     std::string especialidad;
 public:
 
-    Empleado(std::string nombre, char sexo, std::string DNI, unsigned int sueldo, std::string horas, std::string dias_vacas, std::string especialidad);
+    Empleado(std::string nombre, char sexo, const string DNI, unsigned int sueldo, std::string horas, std::string dias_vacas, std::string especialidad);
 
     void llamarnum(Cliente miclient);// la idea es que reciba un cliente y lo llame
 

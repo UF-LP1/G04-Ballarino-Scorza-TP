@@ -6,7 +6,7 @@
 class Cliente : public persona {
 public:
 
-    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj,
+    Cliente(string nombre, char sexo, const string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj,
         unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar,
         string formapagar, bool ticketfisico, string mail, bool perchasdisfr, unsigned int cantsemana, bool alquiler);
 
@@ -45,8 +45,6 @@ public:
 
 private:
 
-    string Nombre;
-    string DNI;
     string marca;//agregamos nombre y cantidad al cliente para que en el main de los pase al encargado
     unsigned int cantidad;
     bool capricho_vajilla;

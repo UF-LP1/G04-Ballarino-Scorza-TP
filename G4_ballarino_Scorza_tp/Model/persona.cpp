@@ -4,10 +4,10 @@
 #include<string>
 
 
-persona::persona(string nombre, char sexo, string DNI) {
+persona::persona(string nombre, char sexo, const string DNI):DNI(DNI) {
     this->nombre = nombre;
     this->sexo = sexo;
-    this->DNI = DNI;
+    
 }
 
 
@@ -32,15 +32,10 @@ void persona::set_sexo(char sexo) {
 }
 
 
-string persona::get_dni() {
+const string persona::get_dni() {
     return DNI;
 }
 
-
-void persona::set_dni(string DNI) {
-    this->DNI = DNI;
-    return;
-}
 
 persona::~persona() {
 
