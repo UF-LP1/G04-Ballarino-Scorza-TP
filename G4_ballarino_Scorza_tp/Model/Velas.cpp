@@ -9,7 +9,7 @@
 
 Velas::Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string material)
     :producto(marca, color, tamanio, precio, cant_prod) {
-    this->Material = Material;
+    this->material = material;
 
 }
 
@@ -21,7 +21,7 @@ void Velas::set_material(string material) {
 
 
 string Velas::get_material() {
-    return this->Material;
+    return this->material;
 }
 
 Velas::~Velas() {
