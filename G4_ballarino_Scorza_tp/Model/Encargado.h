@@ -4,12 +4,15 @@
 #ifndef _ENCARGADO_H
 #define _ENCARGADO_H
 #include<list>
-#include "producto.h"
 #include "Trabajador.h"
-class Cliente;/* no se puede agregar al encabezado #include cliente.h ya que se crea un bucle(porque trabajador ya esta llamado en cliente tambien,
+
+class producto;
+class Cliente;/* no se puede agregar al encabezado #include cliente.h , ya que se crea un bucle(porque encargado ya esta llamado en cliente,
               y encontramos en la seccion foward declaration de cpp.reference que se resuelve asi, y se llama 
                identificador de atributo de clave de clase;
               */
+
+
 class Encargado : public Trabajador {
 private:
     static float preciototal;

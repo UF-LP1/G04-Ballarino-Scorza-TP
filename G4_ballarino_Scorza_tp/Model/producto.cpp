@@ -72,9 +72,3 @@ void producto::set_cantprod(unsigned int cant_prod) {
 producto::~producto() {
 
 }
-
-
-float operator*(const producto& prod, unsigned int cantidad) {
-    float precio = std::stof(prod.precio) * cantidad;
-    return precio;
-}

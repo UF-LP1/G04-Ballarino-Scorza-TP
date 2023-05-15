@@ -4,10 +4,19 @@
 
 #include <string>
 #include<iostream>
+
 using namespace std;
 
 
 class producto {
+
+protected:
+    string marca;
+    string color;
+    string tamanio;
+    string  precio;
+    unsigned int cant_prod;
+
 public:
 
     producto(string marca, string color, string tamanio, string precio, unsigned int cant_prod);
@@ -25,7 +34,7 @@ public:
 
 
 
-   virtual void set_marca(string marca)=0;// debemos poner al menos un mertodo  virtual para convertir la clase en abstracta y asi poder hacer dinamic cast
+   void set_marca(string marca);
 
 
     void set_color(string color);
@@ -39,15 +48,8 @@ public:
 
     void set_cantprod(unsigned int cant_prod);
 
+   virtual ~producto();// debemos poner al menos un mertodo  virtual para convertir la clase en abstracta y asi poder hacer dinamic cast
 
-   virtual ~producto();
-    
-public:
-    string marca;
-    string color;
-    string tamanio;
-    string  precio;
-    unsigned int cant_prod;
 };
 
 
