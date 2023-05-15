@@ -15,7 +15,8 @@ unsigned int Trabajador::get_sueldo() {
 }
 
 
-void Trabajador::set_sueldo(unsigned int) {
+void Trabajador::set_sueldo(unsigned int sueldo) {
+    this->sueldo = sueldo;
     return;
 }
 
@@ -25,7 +26,8 @@ string Trabajador::get_horas() {
 }
 
 
-void Trabajador::set_horas(string) {
+void Trabajador::set_horas(string horas) {
+    this->horas=horas;
     return;
 }
 
@@ -35,7 +37,8 @@ string Trabajador::get_diasv() {
 }
 
 
-void Trabajador::set_diasv(string) {
+void Trabajador::set_diasv(string dias_vacas) {
+    this->dias_vacas = dias_vacas;
     return;
 }
 

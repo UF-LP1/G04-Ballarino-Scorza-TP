@@ -11,8 +11,11 @@ disfraces::disfraces(string marca, string color, string tamanio, string precio, 
     this->estado = estado;
 }
 
-
+enum class disfraces::tipo_d_venta disfraces::get_tipoventa() {
+    return tipvent;
+}
 void disfraces::set_nombre(string nombre) {
+    this->nombre = nombre;
     return;
 }
 
@@ -28,18 +31,12 @@ string disfraces::get_estado() {
 
 
 void disfraces::set_estado(string estado) {
+    this->estado = estado;
     return;
 }
 
 
-tipo_d_venta disfraces::get_tipoventa() {
-    return null;
-}
 
-
-void disfraces::set_tipoventa(tipo_d_venta  tipvent) {
-    return;
-}
 
 disfraces::~disfraces() {
 

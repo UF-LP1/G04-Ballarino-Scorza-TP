@@ -19,6 +19,7 @@ string platos::get_forma() {
 
 
 void platos::set_forma(string forma) {
+    this->forma = forma;
     return;
 }
 

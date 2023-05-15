@@ -6,7 +6,8 @@
 class Cliente : public persona {
 public:
 
-    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar,string formapagar);
+    Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj,
+        unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar,string formapagar, bool ticketfisico, string mail);
 
 
     bool get_capricho();
@@ -28,8 +29,13 @@ public:
     void set_formapagar(string formapagarr);
     
     string get_formapagar();
+    void set_ticket(bool ticketfisico);
+    bool get_ticket();
+    void set_mail(string mail);
+    string get_mail();
 
     friend bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente);
+
 
     ~Cliente();
 
@@ -44,6 +50,9 @@ private:
     unsigned int numerodeturno;
     bool pararegalar;
     string formapagar;
+    bool ticketfisico;
+    string mail;//no lo hacemos en clase persona porque en este trabajo solo lo necesita el cliente
+
     /* creo atributo forma  de pagar que va a recibir metodo de pago, si la forma de pagar que tiene nuestro cliente es igual a alguna de las
                           alguna de las cuatro manera admitidas, devolvera el metodo de pago para que lo imprima.                                */
   };

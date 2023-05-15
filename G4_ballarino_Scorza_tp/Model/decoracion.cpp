@@ -7,21 +7,19 @@
 
 
 
-decoracion::decoracion(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_dec tipo_decc)
+decoracion::decoracion(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_dec tipodec)
     :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod) {
 
 }
 
-
-tipo_dec decoracion::get_dec() {
-    return this->tipo_decc;
+enum class decoracion::tipo_dec decoracion::get_dec() {
+    return tipdec;
 }
 
 
 
-void decoracion::set_dec(tipo_dec tipo_decc) {
-    return;
-}
+
+
 
 decoracion::~decoracion() {
 

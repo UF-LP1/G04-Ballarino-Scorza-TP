@@ -7,14 +7,15 @@
 
 
 
-Velas::Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string Material)
+Velas::Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string material)
     :producto(marca, color, tamanio, precio, cant_prod) {
     this->Material = Material;
 
 }
 
 
-void Velas::set_material(string) {
+void Velas::set_material(string material) {
+    this->material = material;
     return;
 }
 

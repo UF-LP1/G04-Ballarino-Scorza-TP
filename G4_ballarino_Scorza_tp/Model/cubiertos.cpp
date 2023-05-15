@@ -7,20 +7,17 @@
 
 
 
-cubiertos::cubiertos(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, tipo_cub tipo_cubi)
+cubiertos::cubiertos(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, tipo_cub tipo_cub)
     :Vajilla_descartables(marca, color, tamanio, precio, cant_prod, decoracionvajillas, material) {
 
 }
 
-
-tipo_cub cubiertos::get_tipocub() {
-    return null;
+enum class cubiertos::tipo_cub cubiertos::get_tipocub() {
+    return tipocub;
 }
 
 
-void cubiertos::set_tipocu(tipo_cub tipo_cubi) {
-    return;
-}
+
 
 cubiertos::~cubiertos() {
 

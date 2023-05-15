@@ -11,15 +11,10 @@ vasos::vasos(string marca, string color, string tamanio, string precio, unsigned
 
 }
 
-
-tipo_vaso vasos::get_tipovas() {
-    return;
+enum class vasos::tipo_vaso vasos::get_tipovas() {
+    return tip_vaso;
 }
 
-
-void vasos::set_tipovas(tipo_vaso tip_vaso) {
-    return;
-}
 
 vasos::~vasos() {
 

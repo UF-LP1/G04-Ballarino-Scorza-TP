@@ -16,6 +16,7 @@ string espuma::get_frag() {
 
 
 void espuma::set_frag(string fragancia) {
+    this->fragancia = fragancia;
     return;
 }
 

@@ -15,7 +15,8 @@ globos::globos(string marca, string color, string tamanio, string precio, unsign
 }
 
 
-void globos::set_inflado(bool) {
+void globos::set_inflado(bool inflado) {
+    this->inflado = inflado;
     return;
 }
 

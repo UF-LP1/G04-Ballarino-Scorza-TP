@@ -39,11 +39,13 @@ string Local::get_contacto() {
 
 
 void Local::set_direccion(string direccion) {
+    this->direccion = direccion;
     return;
 }
 
 
 void Local::set_contacto(string Contacto) {
+    this -> Contacto = Contacto;
     return;
 }
 

@@ -9,7 +9,7 @@
 class Velas : public producto {
 public:
 
-    Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string Material);
+    Velas(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string material);
 
 
     void set_material(string material);
@@ -19,7 +19,7 @@ public:
 
     ~Velas();
 private:
-    string Material;
+    string material;
 };
 
 #endif 

@@ -15,6 +15,7 @@ string servilletas::get_gro() {
 }
 
 void servilletas::set_gro(string grosor) {
+    this->grosor = grosor;
     return;
 }
 

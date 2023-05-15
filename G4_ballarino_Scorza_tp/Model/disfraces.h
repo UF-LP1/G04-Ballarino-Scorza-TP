@@ -9,6 +9,7 @@
 class disfraces : public cotillon {
 private:
     enum class tipo_d_venta { alquiler, compra };
+    tipo_d_venta tipvent;
     string nombre;
     string estado;
 
@@ -22,11 +23,11 @@ public:
 
     string get_estado();
 
-    void set_estado(string estad);
+    void set_estado(string estado);
 
     tipo_d_venta get_tipoventa();
 
-    void set_tipoventa(tipo_d_venta tippventa);
+   
 
     ~disfraces();
 

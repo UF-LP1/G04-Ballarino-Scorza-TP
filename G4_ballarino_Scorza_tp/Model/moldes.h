@@ -8,13 +8,14 @@
 class moldes : public Articulos_de_resposteria {
 private:
     enum class tipo_molde { pancakes, tortas, pandulces };
+    tipo_molde tipmolde;
 public:
 
-    moldes(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_molde tippo_molde);
+    moldes(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_molde tipmolde);
 
     tipo_molde get_molde();
 
-    void set_molde(tipo_molde tipmolde);
+   
 
     ~moldes();
 

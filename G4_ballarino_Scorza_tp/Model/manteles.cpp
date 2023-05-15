@@ -12,6 +12,7 @@ manteles::manteles(string marca, string color, string tamanio, string precio, un
 
 
 void manteles::set_impermeable(bool impermeable) {
+    this->impermeable = impermeable;
     return;
 }
 

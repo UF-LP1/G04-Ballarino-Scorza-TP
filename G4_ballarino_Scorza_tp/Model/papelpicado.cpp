@@ -6,15 +6,10 @@ papelpicado::papelpicado(string marca, string color, string tamanio, string prec
 
 }
 
-
-tipo_envase papelpicado::get_envase() {
-    return null;
+enum class papelpicado::tipo_envase papelpicado::get_envase() {
+    return tipoenvas;
 }
 
-
-void papelpicado::set_envase(tipo_envase tipoenvas) {
-    return;
-}
 
 papelpicado::~papelpicado() {
 

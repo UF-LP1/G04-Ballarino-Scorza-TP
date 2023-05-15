@@ -19,7 +19,8 @@ string Golosina::get_informe() {
 }
 
 
-void Golosina::set_informe(string) {
+void Golosina::set_informe(string informe_nutricional) {
+    this->informe_nutricional = informe_nutricional;
     return;
 }
 

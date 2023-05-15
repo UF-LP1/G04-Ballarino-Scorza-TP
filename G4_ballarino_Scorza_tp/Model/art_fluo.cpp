@@ -15,6 +15,7 @@ bool art_fluo::get_pilas() {
 
 
 void art_fluo::set_pilas(bool pilas) {
+    this->pilas = pilas;
     return;
 }
 

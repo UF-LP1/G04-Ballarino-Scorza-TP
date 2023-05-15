@@ -3,7 +3,7 @@
 
 mascara::mascara(string marca, string color, string tamanio, string precio, unsigned int  cant_prod, bool completa)
     :cotillon(marca, color, tamanio, precio, cant_prod) {
-
+    this->completa = completa;
 }
 
 
@@ -13,6 +13,7 @@ bool mascara::get_comp() {
 
 
 void mascara::set_comp(bool completa) {
+    this->completa = completa;
     return;
 }
 

@@ -11,13 +11,14 @@ Empleado::Empleado(string nombre, char sexo, string DNI, unsigned int sueldo, st
 
 
 void Empleado::llamarnum(list<Cliente> listac) {
-  cout<<""
+    cout << "";
 
     return;
 }
 
 
-void Empleado::set_especia(string) {
+void Empleado::set_especia(string especialidad) {
+    this->especialidad = especialidad;
     return;
 }
 

@@ -25,7 +25,7 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente) 
     {
         if (it->marca == micliente.marca && it->cant_prod >= micliente.cantidad)//impongo condicion
             
-          cobrarproducto(*it, micliente.capricho_vajilla, micliente.cant_caprichos_vaj,micliente.formapagar);
+          cobrarproducto(*it, micliente.capricho_vajilla, micliente.cant_caprichos_vaj,micliente.formapagar,micliente.ticketfisico,micliente.mail);
           envolver_regalo(*it,micliente.pararegalar);
         it++;
         return true;
@@ -33,7 +33,7 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente) 
     return false;
 }
 
-void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj,string formapago) {
+void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj,string formapago,bool ticketfisico,string mail) {
     
     if (Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(&prod))// Hacemos un dynamic cast para ver si el producto es de tipo vajillas, el dynamic cast es para poder crear punteros de clases derivadas de namera segura,esto funcionano nos deja poner capricho vajilla dentro del if
     {
@@ -47,10 +47,18 @@ void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned i
    
     
         Encargado::preciototal += stof(prod.precio) * prod.cant_prod; 
-      
+        string formapaga = manerapagar(formapago);//no lo llamamos directamente en el cout, porque si no tiene forma de pagar se imprimiria que abona sin tener forma de pago, entonces lo sometemos a una condicion
+        if (formapaga == "no tiene forma de pago") {
+            cout << "no te puedo vender" << endl;
+            return;
+        }
+        if (ticketfisico) {
+            cout << "Ticket fisico: El precio de    " << prod.marca << " es: $" << Encargado::preciototal << "y abona en " << formapaga << "." << endl;
+      }else
+            cout<<"Enviar al mail:"<<mail<<"."<< "El precio de" << prod.marca << " es: $" << Encargado::preciototal << "y abona en " << formapaga << "." << endl;
 
-        cout << "El precio  " << prod.marca << " es: $" << Encargado::preciototal <<"y abona en "<< manerapagar(formapago) <<"."<< endl;
-    
+        
+      return;
     }
 
 
@@ -63,7 +71,7 @@ void Encargado::envolver_regalo(producto& prod, bool pararegalar) {
 }
 
 string Encargado::manerapagar(string formapago) {
-
+   
     if (formapago == "efectivo") {
         return "Efectivo";
     }
@@ -77,7 +85,8 @@ string Encargado::manerapagar(string formapago) {
         return "Pago por Aplicación";
     }
     else {
-        return "Seleccione otra forma de pago";
+
+        return "no tiene forma de pago";
     }
 }
 
