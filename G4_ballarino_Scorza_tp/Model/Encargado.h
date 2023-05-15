@@ -23,7 +23,7 @@ public:
     Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area);
 
     bool  buscar_pedido_cliente(list<producto> listap, Cliente micliente);
-    void cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj, string formapago, bool ticketfisico, string mail);
+    void cobrarproducto(producto& prod,Cliente micliente);
     void envolver_regalo(producto& prod, bool pararegalar);
     string manerapagar(string formapago);
     void set_area(string area);

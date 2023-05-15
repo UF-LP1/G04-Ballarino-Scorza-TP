@@ -6,6 +6,7 @@
 #include "Vajilla_descartables.h"
 #include "Cliente.h"
 #include "producto.h"
+#include"disfraces.h"
 
 Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
@@ -26,7 +27,7 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente) 
     {
         if (it->get_marca() == micliente.marca && it->get_cantprod() >= micliente.cantidad)//impongo condicion
             
-          cobrarproducto(*it, micliente.capricho_vajilla, micliente.cant_caprichos_vaj,micliente.formapagar,micliente.ticketfisico,micliente.mail);
+          cobrarproducto(*it, micliente);
           envolver_regalo(*it,micliente.pararegalar);
         it++;
         return true;
@@ -34,29 +35,35 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente) 
     return false;
 }
 
-void Encargado::cobrarproducto(producto& prod, bool capricho_vajilla, unsigned int cant_caprichos_vaj,string formapago,bool ticketfisico,string mail) {
+void Encargado::cobrarproducto(producto& prod,Cliente micliente) {
     
     if (Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(&prod))// Hacemos un dynamic cast para ver si el producto es de tipo vajillas, el dynamic cast es para poder crear punteros de clases derivadas de namera segura,esto funcionano nos deja poner capricho vajilla dentro del if
     {
-        if (capricho_vajilla) {
-            Encargado::preciototal = stof(prod.get_precio()) * cant_caprichos_vaj;//no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
+        if (micliente.get_capricho()) {
+            Encargado::preciototal = stof(prod.get_precio()) * micliente.get_cantcapricho();//no se puede multiplicar string con unisgned int, por lo que utilizamos stof que covierte el string en float esoecificamente: toma tantos caracteres como sea posible para formar una representación de punto flotante válida y los convierte en un valor de punto flotante.
 
             cout << "debera pagar por adelantado:" <<(Encargado::preciototal)* 0.3 << " $." << endl;
 
         }
     }
-   
+    if (disfraces* disfraz = dynamic_cast<disfraces*>(&prod)) {
+        if (micliente.get_alquiler()) {
+            disfraz->set_precio("0");// pomemos esto para que no nos tome el precio del disfraz, sino solo del alquiler.
+            Encargado::preciototal = stof(disfraz->get_preciosemanal()) * micliente.get_cantsemana();
+        }
+    }
     
         Encargado::preciototal += stof(prod.get_precio()) * prod.get_cantprod();
-        string formapaga = manerapagar(formapago);//no lo llamamos directamente en el cout, porque si no tiene forma de pagar se imprimiria que abona sin tener forma de pago, entonces lo sometemos a una condicion
+       
+        string formapaga = manerapagar(micliente.get_formapagar());//no lo llamamos directamente en el cout, porque si no tiene forma de pagar se imprimiria que abona sin tener forma de pago, entonces lo sometemos a una condicion
         if (formapaga == "no tiene forma de pago") {
             cout << "no te puedo vender" << endl;
             return;
         }
-        if (ticketfisico) {
+        if (micliente.get_ticket()) {
             cout << "Ticket fisico: El precio de    " << prod.get_marca() << " es: $" << Encargado::preciototal << "y abona en " << formapaga << "." << endl;
       }else
-            cout<<"Enviar al mail:"<<mail<<"."<< "El precio de" << prod.get_marca() << " es: $" << Encargado::preciototal << "y abona en " << formapaga << "." << endl;
+            cout<<"Enviar al mail:"<<micliente.get_mail()<<"."<< "El precio de" << prod.get_marca() << " es: $" << Encargado::preciototal << "y abona en " << formapaga << "." << endl;
 
         
       return;

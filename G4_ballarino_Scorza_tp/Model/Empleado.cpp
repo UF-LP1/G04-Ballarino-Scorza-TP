@@ -5,9 +5,9 @@
 
 
 Empleado::Empleado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string especialidad)
-    :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), especialidad(especialidad) {
+    :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), especialidad(especialidad){}
 
-}
+
 
 
 void Empleado::llamarnum(Cliente miclient) {

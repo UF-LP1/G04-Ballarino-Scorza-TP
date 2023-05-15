@@ -8,15 +8,16 @@
 
 class disfraces : public cotillon {
 private:
-    enum class tipo_d_venta { alquiler, compra };
-    tipo_d_venta tipvent;
+    
+    
     string nombre;
     string estado;
+    string preciosemanal;
 
 public:
 
-    disfraces(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_d_venta  tipvent, string nombre, string estado);
-
+    disfraces(string marca, string color, string tamanio, string precio, unsigned int cant_prod, string nombre, string estado, string preciosemanal);
+    //entendemos que el atributo tamanio contiene el talle
     void set_nombre(string nombre);
 
     string get_nombre();
@@ -25,8 +26,9 @@ public:
 
     void set_estado(string estado);
 
-    tipo_d_venta get_tipoventa();
-
+    
+    void set_preciosemanal(string preciosemanal);
+    string get_preciosemanal();
    
 
     ~disfraces();

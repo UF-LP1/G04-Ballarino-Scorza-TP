@@ -90,10 +90,10 @@
     <ClCompile Include="Model\Velas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Model\Carteles.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Carteles.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

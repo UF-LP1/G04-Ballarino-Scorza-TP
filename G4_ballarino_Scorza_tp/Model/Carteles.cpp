@@ -13,6 +13,7 @@ string Carteles::get_frase() {
 
 
 void Carteles::set_frase(string frase) {
+    this->frase = frase;
     return;
 }
 

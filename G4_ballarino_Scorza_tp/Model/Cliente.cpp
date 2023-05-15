@@ -5,7 +5,9 @@
 using namespace std;
 
 Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj, unsigned int numerodeturno, 
-    string marca, unsigned int cantidad, bool pararegalar,string formapagar,bool ticketfisico,string mail):persona(nombre, sexo, DNI) {
+    string marca, unsigned int cantidad, bool pararegalar,string formapagar,bool ticketfisico,string mail,
+    bool perchasdisfr, unsigned int cantsemana, bool alquiler):persona(nombre, sexo, DNI) {
+    
     this->cant_caprichos_vaj = cant_caprichos_vaj;
     this->capricho_vajilla = capricho_vajilla;
     this->numerodeturno = numerodeturno;
@@ -14,6 +16,9 @@ Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, un
     this->marca = marca;
     this->formapagar = formapagar;
     this->ticketfisico = ticketfisico;
+    this->perchasdisfr = perchasdisfr;
+    this->cantsemana = cantsemana;
+    this->alquiler = alquiler;
 }
 
 
@@ -78,6 +83,26 @@ void Cliente:: set_mail(string mail) {
 }
 string Cliente:: get_mail() {
     return this->mail;
+}
+bool Cliente::get_perchas() {
+    return this->perchasdisfr;
+}
+void Cliente::set_perchas(bool perchasdisfr) {
+    this->perchasdisfr = perchasdisfr;
+}
+unsigned int Cliente::get_cantsemana() {
+    return this->cantsemana;
+}
+void Cliente::set_cantsemana(unsigned int cantsemana) {
+    this->cantsemana = cantsemana;
+    return;
+}
+bool Cliente::get_alquiler() {
+    return this->alquiler;
+}
+void Cliente::set_alquiler(bool alquiler) {
+    this->alquiler = alquiler;
+    return;
 }
 Cliente::~Cliente() {
 
