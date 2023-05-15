@@ -10,8 +10,8 @@
 #include"Model/manteles.h"
 #include"Model/platos.h"
 #include"Model/Golosinas.h"
-#include"Model/Vajilla_descartables.h"
-#include"Model/vasos.h"}
+#include"../G4_ballarino_Scorza_tp/Model/Vajilla_descartables.h"
+#include"Model/vasos.h"
 #include"Model/cubiertos.h"
 #include "Model/servilletas.h"
 #include"Model/disfraces.h"
@@ -38,7 +38,7 @@ int main() {
     globos miglobos("globin", "rojo", "grande", "20.9", 10, true);
     Velas mivela("velin", "blanco", "pequeño", "45", 5, "cera");
     Golosina migolosina("arcor", "multicolor", "pequeño", "15", 20, "informe_nutricional", "anana");
-    platos miplatos("platova", "verdes", "grande", "50", 8, dec_vajillas::superheroe, "ceramica", "redondos");
+    platos miplatos("platova", "verdes", "grande", "50", 8, platos::dec_vajillas::superheroe, "ceramica", "redondos");
     vasos mivaso("sinfondo", "violeta", "mediano", "28", 12, dec_vajillas::clubes_de_futbol_, "vidrio", tipo_vaso::camping);
     cubiertos micubierto("marca_cubiertos", "color_cubiertos", "tamanio_cubiertos", "precio_cubiertos", 6, dec_vajillas::jugadores_de_futbol, "material_cubiertos", tipo_cub::cuchara);
      servilletas miservilleta("marca_servilletas", "color_servilletas", "tamanio_servilletas", "precio_servilletas", 15, dec_vajillas::princesas, "material_servilletas", "grosor_servilletas");

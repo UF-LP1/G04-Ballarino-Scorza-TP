@@ -9,17 +9,17 @@
 
 class Empleado : public Trabajador {
 private:
-    std::string especialidad;
+    string especialidad;
 public:
 
-    Empleado(std::string nombre, char sexo, const string DNI, unsigned int sueldo, std::string horas, std::string dias_vacas, std::string especialidad);
+    Empleado(string nombre, char sexo, const string DNI, unsigned int sueldo, string horas, string dias_vacas, string especialidad);
 
     void llamarnum(Cliente miclient);// la idea es que reciba un cliente y lo llame
 
  
-    void set_especia(std::string especialidad);
+    void set_especia(string especialidad);
 
-    std::string get_especia();
+    string get_especia();
 
     ~Empleado();
 
