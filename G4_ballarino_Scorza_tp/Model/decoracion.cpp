@@ -8,7 +8,7 @@
 
 
 decoracion::decoracion(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_dec tipodec)
-    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod) {
+    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod),tipdec(tipodec) {
 
 }
 

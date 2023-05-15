@@ -10,9 +10,8 @@ Empleado::Empleado(string nombre, char sexo, string DNI, unsigned int sueldo, st
 }
 
 
-void Empleado::llamarnum(list<Cliente> listac) {
-    cout << "";
-
+void Empleado::llamarnum(Cliente miclient) {
+    cout << "Numero: "<<miclient.get_numdeturno()<<" venga a atenderse.";
     return;
 }
 

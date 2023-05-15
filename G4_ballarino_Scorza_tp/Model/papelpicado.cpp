@@ -2,7 +2,7 @@
 
 
 papelpicado::papelpicado(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_envase tipoenvas)
-    :cotillon(marca, color, tamanio, precio, cant_prod) {
+    :cotillon(marca, color, tamanio, precio, cant_prod),tipoenvas(tipoenvas) {
 
 }
 

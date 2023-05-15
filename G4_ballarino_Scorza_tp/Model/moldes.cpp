@@ -5,7 +5,7 @@
 
 
 moldes::moldes(string marca, string color, string tamanio, string precio, unsigned int cant_prod, tipo_molde tipmolde)
-    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod) {
+    :Articulos_de_resposteria(marca, color, tamanio, precio, cant_prod),tipmolde(tipmolde) {
 
 }
 

@@ -6,7 +6,7 @@
 using namespace std;
 
 Vajilla_descartables::Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material)
-    :producto(marca, color, tamanio, precio, cant_prod) {
+    :producto(marca, color, tamanio, precio, cant_prod),decoracionvajillas(decoracionvajillas) {
     this->material = material;
 }
 enum class Vajilla_descartables::dec_vajillas Vajilla_descartables::get_deco() {
