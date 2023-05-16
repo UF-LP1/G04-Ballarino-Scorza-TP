@@ -32,7 +32,7 @@ public:
     unsigned int get_cantidad();
     void set_marca(string marca);
     string get_marca();
-    string get_formapagar();
+    string get_formapagar(); 
     void set_ticket(bool ticketfisico);
     bool get_ticket();
     void set_mail(string mail);
