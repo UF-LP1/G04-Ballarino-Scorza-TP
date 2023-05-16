@@ -3,6 +3,7 @@
 #define _VAJILLA_DESCARTABLES_H
 
 #include "producto.h"
+#include <string>
 
 
 class Vajilla_descartables : public producto {
@@ -22,7 +23,7 @@ public:
 
     void set_material(string material);
 
-    ~Vajilla_descartables();
+ ~Vajilla_descartables();
 
 };
 

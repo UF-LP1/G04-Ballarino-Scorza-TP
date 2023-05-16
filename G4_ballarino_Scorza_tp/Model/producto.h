@@ -48,7 +48,7 @@ public:
 
     void set_cantprod(unsigned int cant_prod);
 
-   virtual ~producto();// debemos poner al menos un mertodo  virtual para convertir la clase en abstracta y asi poder hacer dinamic cast
+    virtual ~producto();// debemos poner al menos un mertodo  virtual para convertir la clase en abstracta y asi poder hacer dinamic cast
 
 };
 
