@@ -7,6 +7,7 @@
 #include "Cliente.h"
 #include "producto.h"
 #include"disfraces.h"
+#include"platos.h"
 
 Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {
@@ -41,8 +42,8 @@ bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente) 
 void Encargado::cobrarproducto(producto* prod, Cliente& micliente) {
     if (prod != nullptr && &micliente != nullptr)
     {
-        Vajilla_descartables* vajilla = dynamic_cast<Vajilla_descartables*>(prod);
-        if (vajilla != nullptr)                 // Hacemos un dynamic cast para ver si el producto es de tipo vajillas, el dynamic cast es para poder crear punteros de clases derivadas de namera segura,esto funcionano nos deja poner capricho vajilla dentro del if
+        
+        if (dynamic_cast<Vajilla_descartables*>(prod) != nullptr)                 // Hacemos un dynamic cast para ver si el producto es de tipo vajillas, el dynamic cast es para poder crear punteros de clases derivadas de namera segura,esto funcionano nos deja poner capricho vajilla dentro del if
         {
             if (micliente.get_capricho())
             {
