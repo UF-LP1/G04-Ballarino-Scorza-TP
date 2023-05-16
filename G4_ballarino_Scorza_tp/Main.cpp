@@ -73,14 +73,15 @@ int main() {
     Encargado encargado("lucila", 'F', "437654321", 4000, "8 horas diarias", "50 días al año", "Caja");
 
     empleado.llamarnum(micliente);
-
+    
     bool prueba = encargado.buscar_pedido_cliente(listaProductos, micliente);
 
     if (prueba == false)
 
   cout << "Disculpeme " << micliente.get_nombre() << " , pero no hay stock de lo que pide" << endl;
 
-    else 
+    else
+    
         cout << "corre el programa" << endl;
 
     return 0;
