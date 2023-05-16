@@ -6,8 +6,9 @@
 
 
 class cubiertos : public Vajilla_descartables {
+public:
+    enum class tipo_cub { cuchara, tenedor, cuchillo };// tuvimos que poner todos los enums publics, para que corran en el main
 private:
-    enum class tipo_cub { cuchara, tenedor, cuchillo };
     tipo_cub tipocub;
 public:
 

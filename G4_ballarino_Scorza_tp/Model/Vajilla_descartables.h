@@ -6,7 +6,7 @@
 
 
 class Vajilla_descartables : public producto {
-public:
+public://tuvimos que poner todos los enums publics, para que corran en el main
     enum  class dec_vajillas { superheroe, clubes_de_futbol_, jugadores_de_futbol, princesas }; // Ponemos ENUM CLASS ya que nos tira la advertencia de "enum type is unscoped,prefer ENUM CLASS over ENUM"
 protected:
   

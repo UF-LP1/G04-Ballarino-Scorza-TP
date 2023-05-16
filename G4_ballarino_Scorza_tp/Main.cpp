@@ -32,24 +32,24 @@ int main() {
     para ellos nos vamos a tener que crear una lista de productos que es la que tiene nuestro encargado para buscar,
     y luego vamos a tener que crear un cliente que es el que elige que va a comprar,
     */
-    std::list<producto> listaProductos;
+    list<producto> listaProductos;
 
-    // Agregar objetos de todas las clases derivadas a la lista
-    globos miglobos("globin", "rojo", "grande", "20.9", 10, true);
-    Velas mivela("velin", "blanco", "pequeño", "45", 5, "cera");
-    Golosina migolosina("arcor", "multicolor", "pequeño", "15", 20, "informe_nutricional", "anana");
-    platos miplatos("platova", "verdes", "grande", "50", 8, platos::dec_vajillas::superheroe, "ceramica", "redondos");
-    vasos mivaso("sinfondo", "violeta", "mediano", "28", 12, dec_vajillas::clubes_de_futbol_, "vidrio", tipo_vaso::camping);
-    cubiertos micubierto("marca_cubiertos", "color_cubiertos", "tamanio_cubiertos", "precio_cubiertos", 6, dec_vajillas::jugadores_de_futbol, "material_cubiertos", tipo_cub::cuchara);
-     servilletas miservilleta("marca_servilletas", "color_servilletas", "tamanio_servilletas", "precio_servilletas", 15, dec_vajillas::princesas, "material_servilletas", "grosor_servilletas");
-     manteles mimantel("marca_manteles", "color_manteles", "tamanio_manteles", "precio_manteles", 3, dec_vajillas::superheroe, "material_manteles", true);
-    disfraces midisfraz("marca_disfraces", "color_disfraces", "tamanio_disfraces", "precio_disfraces", 2, "nombre_disfraces", "estado_disfraces", "preciosemanal_disfraces");
-     papelpicado mipapelpicado("marca_papelpicado", "color_papelpicado", "tamanio_papelpicado", "precio_papelpicado", 7, tipo_envase::bolsita);
-     mascara mimascara("marca_mascara", "color_mascara", "tamanio_mascara", "precio_mascara", 4, true);
-     espuma miespuma("marca_espuma", "color_espuma", "tamanio_espuma", "precio_espuma", 9, "fragancia_espuma");
-    art_fluo miartfluo("marca_art_fluo", "color_art_fluo", "tamanio_art_fluo", "precio_art_fluo", 6, true);
-    Carteles micarteles("marca_carteles", "color_carteles", "tamanio_carteles", "precio_carteles", 10, "frase_carteles");
-    moldes mimoldes("marca_moldes", "color_moldes", "tamanio_moldes", "precio_moldes", 3, tipo_molde::pancakes);
+    // Agregar los  objetos a la lista
+    globos miglobos("globin", "rojo", "grande", "20$", 10, true);
+    Velas mivela("velin", "blanco", "pequeño", "45$", 5, "cera");
+    Golosina migolosina("arcor", "multicolor", "pequeño", "15$", 20, "informe_nutricional", "anana");
+    platos miplatos("platova", "verde", "grande", "100$", 8, platos::dec_vajillas::superheroe, "ceramica", "redondo");
+    vasos mivaso("sinfondo", "violeta", "mediano", "50$", 12,vasos::dec_vajillas::clubes_de_futbol_, "vidrio", vasos::tipo_vaso::camping);
+    cubiertos micubierto("tramontana", "marron", "10cm", "150$", 10, cubiertos::dec_vajillas::jugadores_de_futbol, "madera", cubiertos::tipo_cub::cuchara);
+     servilletas miservilleta("elite", "blanca", "10cmcuadrado", "10$", 15, servilletas::dec_vajillas::princesas, "papel", "2mm");
+     manteles mimantel("tumantelito", "verde", "1mcuadrado", "125$", 3,manteles::dec_vajillas::superheroe, "nylon", true);
+    disfraces midisfraz("zara", "verde", "Medium", "500$", 4, "Hulk", "bueno", "50$");
+     papelpicado mipapelpicado("tupapelitopicado", "azul", "50g", "40$", 7, papelpicado::tipo_envase::bolsita);
+     mascara mimascara("themask", "verde", "1ocmcuadrados", "170$", 4, true);
+     espuma miespuma("diversion", "blanca", "100g", "120$", 9, "lavanda");
+    art_fluo miartfluo("tufiestita", "amarillo", "25cm", "60$", 6, true);
+    Carteles micarteles("easy", "verde", "2mcuadrado", "110$", 10, "feliz cumple");
+    moldes mimoldes("La nona", "plateado", "mediano", "70$", 3, moldes::tipo_molde::pancakes);
     listaProductos.push_back(miglobos);
     listaProductos.push_back(mivela);
     listaProductos.push_back(migolosina);
@@ -66,22 +66,22 @@ int main() {
     listaProductos.push_back(micarteles);
     listaProductos.push_back(mimoldes);
 
-    Cliente cliente("Juan", 'M', "123456789", true, 5, 1, "arcor", 10, true, "Tarjeta", true, "cliente@ejemplo.com", false, 2, true);
-    Empleado empleado("Pedro", 'M', "987654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
-    empleado.llamarnum(cliente);
-    //se me ocurrio crear una funcion de empleado que pida cuantas cosas quiere comprar para saber hasta donde va el for . y hay problemas em el constructor de empleado
+    Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, true, "Tarjeta de Débito", true, "juanpepitolanus@gmail.com", false, 0, false);
+    
+    Empleado empleado("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
 
+    Encargado encargado("lucila", 'F', "437654321", 4000, "8 horas diarias", "50 días al año", "Caja");
 
+    empleado.llamarnum(micliente);
 
+    bool prueba = encargado.buscar_pedido_cliente(listaProductos, micliente);
 
+    if (prueba == false)
 
+  cout << "Disculpeme " << micliente.get_nombre() << " , pero no hay stock de lo que pide" << endl;
 
+    else 
+        cout << "corre el programa" << endl;
 
-
-
-
-
-
-    cout << "corre el programa" << endl;
     return 0;
 }

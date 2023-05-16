@@ -7,8 +7,9 @@
 
 
 class papelpicado : public cotillon {
+public:
+    enum class tipo_envase { bolsita, cañon };// tuvimos que poner todos los enums publics, para que corran en el main
 private:
-    enum class tipo_envase { bolsita, cañon };
     tipo_envase tipoenvas;
 public:
 

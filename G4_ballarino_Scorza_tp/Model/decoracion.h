@@ -6,8 +6,9 @@
 
 
 class decoracion : public Articulos_de_resposteria {
-private:
-    enum class tipo_dec { grana, chocolate, fondand };
+public:
+    enum class tipo_dec { grana, chocolate, fondand }; // tuvimos que poner todos los enums publics, para que corran en el main
+    private:
     tipo_dec tipdec;
 public:
 

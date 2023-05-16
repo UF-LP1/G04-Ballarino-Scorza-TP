@@ -6,8 +6,9 @@
 
 
 class moldes : public Articulos_de_resposteria {
+public:
+    enum class tipo_molde { pancakes, tortas, pandulces };//tuvimos que poner todos los enums publics, para que corran en el main
 private:
-    enum class tipo_molde { pancakes, tortas, pandulces };
     tipo_molde tipmolde;
 public:
 
