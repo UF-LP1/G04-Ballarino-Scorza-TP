@@ -28,7 +28,10 @@ public:
     bool get_regalo();
 
     void set_formapagar(string formapagarr);
-    
+    void set_cantidad(unsigned int cantidad);
+    unsigned int get_cantidad();
+    void set_marca(string marca);
+    string get_marca();
     string get_formapagar();
     void set_ticket(bool ticketfisico);
     bool get_ticket();

@@ -66,7 +66,7 @@ int main() {
     listaProductos.push_back(micarteles);
     listaProductos.push_back(mimoldes);
 
-    Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, true, "Tarjeta de Débito", true, "juanpepitolanus@gmail.com", false, 0, false);
+    Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, true, "debito", true, "juanpepitolanus@gmail.com", false, 0, false);
     
     Empleado empleado("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
 

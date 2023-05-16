@@ -104,6 +104,20 @@ void Cliente::set_alquiler(bool alquiler) {
     this->alquiler = alquiler;
     return;
 }
+void Cliente::set_cantidad(unsigned int cantidad) {
+    this->cantidad = cantidad;
+    return;
+}
+unsigned int Cliente:: get_cantidad() {
+    return this->cantidad;
+}
+void Cliente::set_marca(string marca) {
+    this->marca = marca;
+    return;
+}
+string Cliente::get_marca() {
+    return this->marca;
+}
 Cliente::~Cliente() {
 
 }
