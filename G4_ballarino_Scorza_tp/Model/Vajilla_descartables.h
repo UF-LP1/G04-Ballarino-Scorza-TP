@@ -19,9 +19,9 @@ public:
     Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material);
     dec_vajillas get_deco();
 
-    string get_material();
+   virtual string get_material();
 
-    void set_material(string material);
+   virtual void set_material(string material);
 
  ~Vajilla_descartables();
 
