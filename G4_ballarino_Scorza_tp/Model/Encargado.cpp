@@ -8,6 +8,8 @@
 #include "producto.h"
 #include"disfraces.h"
 #include"cubiertos.h"
+#include "Trabajador.h"
+#include"Empleado.h"
 
 Encargado::Encargado(string nombre, char sexo, string DNI, unsigned int sueldo, string horas, string dias_vacas, string area)
     :Trabajador(nombre, sexo, DNI, sueldo, horas, dias_vacas), area(area) {

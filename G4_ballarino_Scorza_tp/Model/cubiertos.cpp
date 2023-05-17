@@ -18,7 +18,9 @@ enum class cubiertos::tipo_cub cubiertos::get_tipocub() {/*Ponemos el prototipo 
 }
 
 
-
+string cubiertos::descripcion(string descripcion) {
+    return "prueba de cubierto";
+}
 
 cubiertos::~cubiertos() {
 

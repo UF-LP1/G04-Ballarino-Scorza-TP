@@ -19,9 +19,11 @@ public:
     Vajilla_descartables(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material);
     dec_vajillas get_deco();
 
-   virtual string get_material();
+   string get_material();
 
-   virtual void set_material(string material);
+   string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
+
+   void set_material(string material);
 
  ~Vajilla_descartables();
 

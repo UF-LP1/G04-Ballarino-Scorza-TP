@@ -26,7 +26,7 @@
 using namespace std;
 
 //LA IDEA ES PROBAR LOS METODOS CREANDO LOS OBJETOS NECESARIO
-int main() {
+int  main() {
     
     /* Primero vamos a hacer funcionar el metodo buscar_pedido_cliente y todos los metodos que son llamados en ella,
     para ellos nos vamos a tener que crear una lista de productos que es la que tiene nuestro encargado para buscar,
@@ -82,7 +82,7 @@ int main() {
 
     else
     
-        cout << "corre el programa" << endl;
+        cout << "corre el main" << endl;
 
     return 0;
 }

@@ -16,7 +16,7 @@ public:
 
     tipo_cub get_tipocub();
 
-    
+    string descripcion(string descripcion);
 
     ~cubiertos();
 

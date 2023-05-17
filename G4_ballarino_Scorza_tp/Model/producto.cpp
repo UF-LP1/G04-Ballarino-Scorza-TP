@@ -67,6 +67,10 @@ void producto::set_cantprod(unsigned int cant_prod) {
     this->cant_prod = cant_prod;
     return;
 }
+string producto::descripcion(string descripcion) {
+
+    return "funcion virtual para que corra el dynamic cast";
+}
 
 
 producto::~producto() {
