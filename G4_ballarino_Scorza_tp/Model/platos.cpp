@@ -23,6 +23,10 @@ void platos::set_forma(string forma) {
     return;
 }
 
+string platos::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 platos::~platos() {
 
 }

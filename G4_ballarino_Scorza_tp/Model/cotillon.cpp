@@ -6,6 +6,7 @@ cotillon::cotillon(string marca, string color, string tamanio, string precio, un
 
 }
 
+
 cotillon::~cotillon() {
 
 }

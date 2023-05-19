@@ -21,6 +21,7 @@ public:
 
     void set_gro(string grosor);
 
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~servilletas();
 
 };

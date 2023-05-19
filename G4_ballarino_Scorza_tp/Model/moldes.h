@@ -16,7 +16,7 @@ public:
 
     tipo_molde get_molde();
 
-   
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
 
     ~moldes();
 

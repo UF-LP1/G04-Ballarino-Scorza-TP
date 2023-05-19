@@ -24,9 +24,6 @@ void Vajilla_descartables::set_material(string material) {
     this->material = material;
     return;
 }
-string Vajilla_descartables::descripcion(string descripcion) {
-    return "funcion virtual para que corrar el dynamic";
-}
 
 Vajilla_descartables::~Vajilla_descartables() {
 

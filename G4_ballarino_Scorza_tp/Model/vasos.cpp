@@ -15,6 +15,10 @@ enum class vasos::tipo_vaso vasos::get_tipovas() {
     return tip_vaso;
 }
 
+string vasos::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 
 vasos::~vasos() {
 

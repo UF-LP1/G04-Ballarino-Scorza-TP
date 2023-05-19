@@ -39,7 +39,7 @@ public:
     string get_mail();
     void set_perchas(bool perchasdisfr);
     bool get_perchas();
-    friend bool Encargado::buscar_pedido_cliente(list<producto> listap, Cliente micliente);
+    friend bool Encargado::buscar_pedido_cliente(list<producto*> listap, Cliente micliente);
     unsigned int get_cantsemana();
     void set_cantsemana(unsigned int cantsemana);
     bool get_alquiler();

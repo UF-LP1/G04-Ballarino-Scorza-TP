@@ -13,7 +13,7 @@ public:
     void set_impermeable(bool impermeable);
 
     bool get_impermeable();
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~manteles();
 private:
     bool impermeable;

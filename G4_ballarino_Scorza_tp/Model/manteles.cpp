@@ -20,6 +20,10 @@ bool manteles::get_impermeable() {
     return this->impermeable;
 }
 
+string manteles::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 manteles::~manteles() {
 
 }

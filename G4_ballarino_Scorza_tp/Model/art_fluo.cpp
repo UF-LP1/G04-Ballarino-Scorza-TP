@@ -19,6 +19,10 @@ void art_fluo::set_pilas(bool pilas) {
     return;
 }
 
+string art_fluo::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 art_fluo::~art_fluo() {
 
 }

@@ -17,6 +17,9 @@ void mascara::set_comp(bool completa) {
     return;
 }
 
+string mascara::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
 mascara::~mascara() {
 
 }

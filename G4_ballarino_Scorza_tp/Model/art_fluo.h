@@ -15,7 +15,7 @@ public:
     bool get_pilas();
 
     void set_pilas(bool pilas);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~art_fluo();
 private:
     bool pilas;

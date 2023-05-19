@@ -43,6 +43,10 @@ string disfraces::get_preciosemanal() {
     return this->preciosemanal;
 }
 
+string disfraces::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 disfraces::~disfraces() {
 
 }

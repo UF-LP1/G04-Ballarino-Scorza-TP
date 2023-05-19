@@ -13,7 +13,9 @@ enum class  moldes::tipo_molde moldes::get_molde() {
     return tipmolde;
 }
 
-
+string moldes::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
 moldes::~moldes() {
 
 }

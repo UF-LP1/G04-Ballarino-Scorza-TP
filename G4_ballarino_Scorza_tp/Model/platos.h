@@ -14,7 +14,7 @@ public:
     string get_forma();
 
     void set_forma(string forma);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~platos();
 private:
     string forma;

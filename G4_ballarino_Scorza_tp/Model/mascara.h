@@ -14,7 +14,7 @@ public:
     bool get_comp();
 
     void set_comp(bool completa);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~mascara();
 private:
     bool completa;

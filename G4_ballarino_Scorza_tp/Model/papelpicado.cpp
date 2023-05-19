@@ -10,7 +10,9 @@ enum class papelpicado::tipo_envase papelpicado::get_envase() {
     return tipoenvas;
 }
 
-
+string papelpicado::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
 papelpicado::~papelpicado() {
 
 }

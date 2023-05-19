@@ -15,6 +15,8 @@ public:
 
     bool get_inflado();
 
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
+
     ~globos();
 
 private:

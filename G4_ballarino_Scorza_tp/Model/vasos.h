@@ -13,7 +13,9 @@ private:
 public:
     vasos(string marca, string color, string tamanio, string precio, unsigned int cant_prod, dec_vajillas decoracionvajillas, string material, tipo_vaso tip_vaso);
     tipo_vaso get_tipovas();
-    
+
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
+  
     ~vasos();
 
 

@@ -24,6 +24,10 @@ string Velas::get_material() {
     return this->material;
 }
 
+string Velas::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 Velas::~Velas() {
 
 }

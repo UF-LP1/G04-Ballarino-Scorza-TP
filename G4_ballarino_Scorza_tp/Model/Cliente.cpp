@@ -8,13 +8,14 @@ Cliente::Cliente(string nombre, char sexo, string DNI, bool capricho_vajilla, un
     string marca, unsigned int cantidad, bool pararegalar,string formapagar,bool ticketfisico,string mail,
     bool perchasdisfr, unsigned int cantsemana, bool alquiler):persona(nombre, sexo, DNI) {
     
-    this->cant_caprichos_vaj = cant_caprichos_vaj;
+    this->cant_caprichos_vaj = cant_capricho_vaj;
     this->capricho_vajilla = capricho_vajilla;
     this->numerodeturno = numerodeturno;
     this->pararegalar = pararegalar;
     this->cantidad = cantidad;
     this->marca = marca;
     this->formapagar = formapagar;
+    this->mail = mail;
     this->ticketfisico = ticketfisico;
     this->perchasdisfr = perchasdisfr;
     this->cantsemana = cantsemana;

@@ -20,6 +20,9 @@ void espuma::set_frag(string fragancia) {
     return;
 }
 
+string espuma::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
 espuma::~espuma() {
 
 }

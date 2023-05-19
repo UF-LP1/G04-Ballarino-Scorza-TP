@@ -15,7 +15,7 @@ public:
     string get_frase();
 
     void set_frase(string frase);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     ~Carteles();
 };
 

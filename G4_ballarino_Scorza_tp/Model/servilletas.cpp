@@ -19,6 +19,10 @@ void servilletas::set_gro(string grosor) {
     return;
 }
 
+string servilletas::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 servilletas::~servilletas() {
 
 }

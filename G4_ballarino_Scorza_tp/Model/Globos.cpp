@@ -24,6 +24,10 @@ bool globos::get_inflado() {
     return this->inflado;
 }
 
+string globos::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 globos::~globos() {
 
 }

@@ -25,7 +25,7 @@ public:
     string get_estado();
 
     void set_estado(string estado);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
     
     void set_preciosemanal(string preciosemanal);
     string get_preciosemanal();

@@ -25,6 +25,7 @@ public:
 
     void set_sabor(string sabor);
 
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
 
     ~Golosina();
 

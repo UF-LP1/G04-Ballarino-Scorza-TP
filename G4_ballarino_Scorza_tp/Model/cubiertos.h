@@ -16,7 +16,7 @@ public:
 
     tipo_cub get_tipocub();
 
-    string descripcion(string descripcion);
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
 
     ~cubiertos();
 

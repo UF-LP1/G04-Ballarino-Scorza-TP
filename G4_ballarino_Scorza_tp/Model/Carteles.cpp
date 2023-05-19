@@ -17,6 +17,10 @@ void Carteles::set_frase(string frase) {
     return;
 }
 
+string Carteles::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 Carteles::~Carteles() {
 
 }

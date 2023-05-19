@@ -32,41 +32,33 @@ int  main() {
     para ellos nos vamos a tener que crear una lista de productos que es la que tiene nuestro encargado para buscar,
     y luego vamos a tener que crear un cliente que es el que elige que va a comprar,
     */
-    list<producto> listaProductos;
+    list<producto*> listaProductos;
 
     // Agregar los  objetos a la lista
-    globos miglobos("globin", "rojo", "grande", "20$", 10, true);
-    Velas mivela("velin", "blanco", "pequeño", "45$", 5, "cera");
-    Golosina migolosina("arcor", "multicolor", "pequeño", "15$", 20, "informe_nutricional", "anana");
-    platos miplatos("platova", "verde", "grande", "100$", 8, platos::dec_vajillas::superheroe, "ceramica", "redondo");
-    vasos mivaso("sinfondo", "violeta", "mediano", "50$", 12,vasos::dec_vajillas::clubes_de_futbol_, "vidrio", vasos::tipo_vaso::camping);
-    cubiertos micubierto("tramontana", "marron", "10cm", "150$", 10, cubiertos::dec_vajillas::jugadores_de_futbol, "madera", cubiertos::tipo_cub::cuchara);
-     servilletas miservilleta("elite", "blanca", "10cmcuadrado", "10$", 15, servilletas::dec_vajillas::princesas, "papel", "2mm");
-     manteles mimantel("tumantelito", "verde", "1mcuadrado", "125$", 3,manteles::dec_vajillas::superheroe, "nylon", true);
-    disfraces midisfraz("zara", "verde", "Medium", "500$", 4, "Hulk", "bueno", "50$");
-     papelpicado mipapelpicado("tupapelitopicado", "azul", "50g", "40$", 7, papelpicado::tipo_envase::bolsita);
-     mascara mimascara("themask", "verde", "1ocmcuadrados", "170$", 4, true);
-     espuma miespuma("diversion", "blanca", "100g", "120$", 9, "lavanda");
-    art_fluo miartfluo("tufiestita", "amarillo", "25cm", "60$", 6, true);
-    Carteles micarteles("easy", "verde", "2mcuadrado", "110$", 10, "feliz cumple");
-    moldes mimoldes("La nona", "plateado", "mediano", "70$", 3, moldes::tipo_molde::pancakes);
-    listaProductos.push_back(miglobos);
-    listaProductos.push_back(mivela);
-    listaProductos.push_back(migolosina);
-    listaProductos.push_back(miplatos);
-    listaProductos.push_back(mivaso);
-    listaProductos.push_back(micubierto);
-    listaProductos.push_back(miservilleta);
-    listaProductos.push_back(mimantel);
-    listaProductos.push_back(midisfraz);
-    listaProductos.push_back(mipapelpicado);
-    listaProductos.push_back(mimascara);
-    listaProductos.push_back(miespuma);
-    listaProductos.push_back(miartfluo);
-    listaProductos.push_back(micarteles);
-    listaProductos.push_back(mimoldes);
+  
+    listaProductos.push_back(new globos("globin", "rojo", "grande", "20$", 10, true));
+    listaProductos.push_back(new Velas("velin", "blanco", "pequeño", "45$", 5, "cera"));
+    listaProductos.push_back(new Golosina("arcor", "multicolor", "pequeño", "15$", 20, "informe_nutricional", "anana"));
+    listaProductos.push_back(new platos("platova", "verde", "grande", "100", 8, platos::dec_vajillas::superheroe, "ceramica", "redondo"));
+    listaProductos.push_back(new vasos("sinfondo", "violeta", "mediano", "50$", 12, vasos::dec_vajillas::clubes_de_futbol_, "vidrio", vasos::tipo_vaso::camping));
+    listaProductos.push_back(new cubiertos("tramontana", "marron", "10cm", "150", 10, cubiertos::dec_vajillas::jugadores_de_futbol, "madera", cubiertos::tipo_cub::cuchara));
+    listaProductos.push_back(new servilletas("elite", "blanca", "10cmcuadrado", "10$", 15, servilletas::dec_vajillas::princesas, "papel", "2mm"));
+    listaProductos.push_back(new manteles("tumantelito", "verde", "1mcuadrado", "125$", 3, manteles::dec_vajillas::superheroe, "nylon", true));
+    listaProductos.push_back(new disfraces("zara", "verde", "Medium", "500$", 4, "Hulk", "bueno", "50$"));
+    listaProductos.push_back(new papelpicado("tupapelitopicado", "azul", "50g", "40$", 7, papelpicado::tipo_envase::bolsita));
+    listaProductos.push_back(new mascara("themask", "verde", "1ocmcuadrados", "170$", 4, true));
+    listaProductos.push_back(new espuma("diversion", "blanca", "100g", "120$", 9, "lavanda"));
+    listaProductos.push_back(new art_fluo("tufiestita", "amarillo", "25cm", "60$", 6, true));
+    listaProductos.push_back(new Carteles("easy", "verde", "2mcuadrado", "110$", 10, "feliz cumple"));
+    listaProductos.push_back(new moldes("La nona", "plateado", "mediano", "70$", 3, moldes::tipo_molde::pancakes));
 
-    Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, true, "debito", true, "juanpepitolanus@gmail.com", false, 0, false);
+    //simulamos cliente
+    /*    Cliente(string nombre, char sexo, const string DNI, bool capricho_vajilla, unsigned int cant_capricho_vaj,
+        unsigned int numerodeturno,string marca,unsigned int cantidad,bool pararegalar,
+        string formapagar, bool ticketfisico, string mail, bool perchasdisfr, unsigned int cantsemana, bool alquiler);
+
+    */
+    Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, false , "efectivo", false, "juanpepitolanus@gmail.com", false, 0, false);
     
     Empleado empleado("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
 
@@ -76,13 +68,17 @@ int  main() {
     
     bool prueba = encargado.buscar_pedido_cliente(listaProductos, micliente);
 
+    //ahora simulamos ingreso por pantalla
     if (prueba == false)
 
-  cout << "Disculpeme " << micliente.get_nombre() << " , pero no hay stock de lo que pide" << endl;
+  cout << "Disculpeme " << micliente.get_nombre() << " , pero no hay stock de lo que pide." << endl;
 
-    else
-    
-        cout << "corre el main" << endl;
+    else    
+        cout << "/corre el main/" << endl;
+
+    for (list<producto*>::iterator it = listaProductos.begin(); it != listaProductos.end(); ++it) {
+        delete* it;
+    }
 
     return 0;
 }

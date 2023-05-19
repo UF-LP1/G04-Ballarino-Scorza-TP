@@ -16,7 +16,7 @@ public:
     string get_frag();
 
     void set_frag(string fragancia);
-
+    string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
 
     ~espuma();
 

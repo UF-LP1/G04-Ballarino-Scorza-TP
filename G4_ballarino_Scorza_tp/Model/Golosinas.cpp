@@ -34,6 +34,10 @@ void Golosina::set_sabor(string) {
     return;
 }
 
+string Golosina::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
+
 Golosina::~Golosina() {
 
 }

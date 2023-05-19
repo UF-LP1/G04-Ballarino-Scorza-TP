@@ -21,7 +21,7 @@ public:
 
    string get_material();
 
-   string descripcion(string descripcion) override;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
+   string descripcion(string descripcion) =0;//override, estás indicando de manera explícita que estás sobrescribiendo un método de la clase base
 
    void set_material(string material);
 

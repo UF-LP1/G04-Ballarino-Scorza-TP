@@ -16,10 +16,9 @@ enum class decoracion::tipo_dec decoracion::get_dec() {
     return tipdec;
 }
 
-
-
-
-
+string decoracion::descripcion(string descripcion) {
+    return "funcion virtual para que corrar el dynamic";
+}
 
 decoracion::~decoracion() {
 
