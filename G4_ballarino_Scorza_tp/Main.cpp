@@ -104,7 +104,7 @@ int  main() {
         cin >> sexo;
         cin.ignore();// el cin.ignore SE USA PARA QUE LOS ENDLS NO SE INTRERPRETEN MAL EN EL CODIGO, para asegurar correcto control de entrada
 
-        if (sexo != 'M' && sexo != 'F') {
+        if (sexo != 'M' && sexo != 'F'&& sexo!= 'm'&& sexo!='f') {
             throw excepcion_sexo();
         }
 
@@ -119,7 +119,7 @@ int  main() {
             throw excepciones_bool();
         }
 
-        if (capricho_vajilla = 0) {
+        if (capricho_vajilla == 0) {
             cant_capricho_vaj = 0;
         }
         else
@@ -171,10 +171,15 @@ int  main() {
         if (ticketfisico != 1 && ticketfisico != 0) {
             throw excepciones_bool();
         }
-
-        cout << "Ingrese el correo electronico: " << endl;
-        getline(cin, mail);
-        cin.ignore();
+        if (ticketfisico == 1) {
+            mail = "ninguno";
+        }
+        else {
+            cout << "Ingrese el correo electronico: " << endl;
+            getline(cin, mail);
+            cin.ignore();
+        }
+       
 
         cout << "Eliges el disfraz en el local? (1 = Si, 0 = No): " << endl;
         cin >> perchasdisfr;
@@ -184,7 +189,17 @@ int  main() {
             throw excepciones_bool();
         }
 
-        if (perchasdisfr = 0) {
+        
+      
+
+        cout << "Desea alquilar el disfraz? (1 = Si, 0 = No): " << endl;
+        cin >> alquiler;
+        cin.ignore();
+
+        if (alquiler != 1 && alquiler != 0) {
+            throw excepciones_bool();
+        }
+        if (alquiler == 0) {
             cantsemana = 0;
         }
         else
@@ -196,15 +211,6 @@ int  main() {
             if (cantsemana < 0) {
                 throw excepciones_unsigned_int();
             }
-        }
-      
-
-        cout << "Desea alquilar el disfraz? (1 = Si, 0 = No): " << endl;
-        cin >> alquiler;
-        cin.ignore();
-
-        if (alquiler != 1 && alquiler != 0) {
-            throw excepciones_bool();
         }
 
         // Crear objeto Cliente con los datos ingresados

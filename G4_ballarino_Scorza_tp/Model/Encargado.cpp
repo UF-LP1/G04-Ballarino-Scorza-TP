@@ -56,7 +56,9 @@ void Encargado::cobrarproducto(producto* prod, Cliente& micliente) {
         if (disfraz != nullptr) {
             if (micliente.get_alquiler()) {
                 Encargado::preciototal = stof(disfraz->get_preciosemanal()) * (float)micliente.get_cantsemana();//precio por alquilar por la cantidad de semana que quiere alquilar el disfraz
+               
             }
+
        
         }
 
@@ -88,16 +90,16 @@ void Encargado::envolver_regalo(producto* prod, bool pararegalar) {
 
 string Encargado::manerapagar(string formapago) {
    
-    if (formapago == "efectivo") {
+    if (formapago == "efectivo"|| formapago=="Efectivo") {
         return "Efectivo";
     }
-    else if (formapago == "debito") {
+    else if (formapago == "debito"|| formapago=="Debito") {
         return "Tarjeta de Debito";
     }
-    else if (formapago == "credito") {
+    else if (formapago == "credito"|| formapago=="Credito") {
         return "Tarjeta de Credito";
     }
-    else if (formapago == "app") {
+    else if (formapago == "app"|| formapago=="App") {
         return "Pago por Aplicacion";
     }
     else {
