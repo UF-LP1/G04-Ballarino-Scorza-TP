@@ -65,7 +65,7 @@ bool Cliente::get_regalo() {
 }
 
 void Cliente:: set_formapagar(string formapagarr) {
-    formapagar = formapagarr;
+    this->formapagar = formapagarr;
     return;
 }
 string Cliente::get_formapagar() {
