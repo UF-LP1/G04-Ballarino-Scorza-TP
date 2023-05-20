@@ -156,6 +156,9 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="excepciones_bool.h" />
+    <ClInclude Include="excepciones_unsigned_int.h" />
+    <ClInclude Include="excepcion_sexo.h" />
     <ClInclude Include="Model\Articulos_de_resposteria.h" />
     <ClInclude Include="Model\art_fluo.h" />
     <ClInclude Include="Model\Carteles.h" />

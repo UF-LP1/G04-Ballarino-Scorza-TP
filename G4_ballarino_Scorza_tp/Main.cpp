@@ -21,7 +21,9 @@
 #include"Model/art_fluo.h"
 #include"Model/Carteles.h"
 #include"Model/moldes.h"
-
+#include "excepciones_bool.h"
+#include"excepciones_unsigned_int.h"
+#include "excepcion_sexo.h"
 
 using namespace std;
 
@@ -58,7 +60,7 @@ int  main() {
         string formapagar, bool ticketfisico, string mail, bool perchasdisfr, unsigned int cantsemana, bool alquiler);
 
     */
-   /* Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, false, "efectivo", false, "juanpepitolanus@gmail.com", false, 0, false);
+   Cliente micliente("Juan pepe", 'M', "41540321", true, 1, 3, "tramontana", 4, false, "efectivo", false, "juanpepitolanus@gmail.com", false, 0, false);
     
     Empleado empleado("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
 
@@ -68,19 +70,20 @@ int  main() {
     
     bool prueba = encargado.buscar_pedido_cliente(listaProductos, micliente);
     
-    //ahora simulamos ingreso por pantalla
     if (prueba == false)
 
   cout << "Disculpeme " << micliente.get_nombre() << " , pero no hay stock de lo que pide." << endl;
 
     else    
-        cout << "/corre el main/" << endl;
+        cout << "El primer cliente fue atendido correctamente" << endl<<endl;
+    
     //ahora hacemos ingreso por pantalla
-    */
+    
+    
     try {
-        //string nombre;
-        //char sexo;
-        //const string DNI;
+        string nombre;
+        char sexo;
+        const string DNI = "44580621";
         bool capricho_vajilla;
         unsigned int cant_capricho_vaj;
         unsigned int numerodeturno;
@@ -94,108 +97,159 @@ int  main() {
         unsigned int cantsemana;
         bool alquiler;
 
-       /* cout << "Ingrese el nombre: " << endl;
+        cout << "Ingrese el nombre: " << endl;
         getline(cin, nombre);
 
-        cout << "Ingrese el sexo M o F: "<<endl;
+        cout << "Ingrese el sexo M o F: " << endl;
         cin >> sexo;
-        
-        cout << "Ingrese el DNI: "<<endl;
-        */
-       
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        cin.ignore();// el cin.ignore SE USA PARA QUE LOS ENDLS NO SE INTRERPRETEN MAL EN EL CODIGO, para asegurar correcto control de entrada
+
+        if (sexo != 'M' && sexo != 'F') {
+            throw excepcion_sexo();
+        }
+
         cout << "Ingrese la marca del producto: " << endl;
         getline(cin, marca);
-       
-        
-        cout << "Quiere personalizar la Vajilla? (1 = Si, 0 = No): "<<endl;
+
+        cout << "Quiere personalizar la Vajilla? (1 = Si, 0 = No): " << endl;
         cin >> capricho_vajilla;
-        if (capricho_vajilla != 1 && capricho_vajilla != 0) { 
-            throw;
+        cin.ignore();
+
+        if (capricho_vajilla != 1 && capricho_vajilla != 0) {
+            throw excepciones_bool();
         }
 
-        if (capricho_vajilla) {
-            cout << "Ingrese la cantidad de personalizados "<<endl;
+        if (capricho_vajilla = 0) {
+            cant_capricho_vaj = 0;
+        }
+        else
+        { 
+            cout << "Ingrese la cantidad de personalizados: " << endl;
             cin >> cant_capricho_vaj;
-        }
-        else {
-            cant_capricho_vaj = false;
-        }
+            cin.ignore();
 
-        cout << "Ingrese el numero de turno: "<<endl;
+            if (cant_capricho_vaj < 0) {
+                throw excepciones_unsigned_int();
+            }
+        }
+        
+
+        cout << "Ingrese el numero de turno: " << endl;
         cin >> numerodeturno;
+        cin.ignore();
 
-      
+        if (numerodeturno < 0) {
+            throw excepciones_unsigned_int();
+        }
 
-        cout << "Ingrese la cantidad que quieres llevar de ese producto: "<<endl;
+        cout << "Ingrese la cantidad que quieres llevar de ese producto: " << endl;
         cin >> cantidad;
-        cin.ignore();//descartamos el carácter de nueva línea residual, lo que permite que getline() funcione correctamente.
+        cin.ignore();
 
-        cout << "el producto  es para regalar? (1 = Si, 0 = No): "<<endl;
+        if (cantidad < 0) {
+            throw excepciones_unsigned_int();
+        }
+
+        cout << "El producto es para regalar? (1 = Si, 0 = No): " << endl;
         cin >> pararegalar;
+        cin.ignore();
 
-        cout << "Ingrese la forma de pago: "<<endl;
+        if (pararegalar != 1 && pararegalar != 0) {
+            throw excepciones_bool();
+        }
+
+
+
+        cout << "Ingrese la forma de pago: " << endl;
         getline(cin, formapagar);
-        cin.ignore();//problema aca
+        cin.ignore();
 
-        cout << "desea un ticket fisico? (1 = Si, 0 = No): "<<endl;
+        cout << "Desea un ticket fisico? (1 = Si, 0 = No): " << endl;
         cin >> ticketfisico;
+        cin.ignore();
 
-        cout << "Ingrese el correo electronico: "<<endl;
+        if (ticketfisico != 1 && ticketfisico != 0) {
+            throw excepciones_bool();
+        }
+
+        cout << "Ingrese el correo electronico: " << endl;
         getline(cin, mail);
         cin.ignore();
 
-        cout << "eliges el disfraz en el local? (1 = Si, 0 = No): "<<endl;
+        cout << "Eliges el disfraz en el local? (1 = Si, 0 = No): " << endl;
         cin >> perchasdisfr;
+        cin.ignore();
 
-        if (perchasdisfr) {
-            cout << "Ingrese la cantidad de semanas de alquiler: " << endl;
-            cin >> cantsemana;
+        if (perchasdisfr != 1 && perchasdisfr != 0) {
+            throw excepciones_bool();
         }
-        else {
+
+        if (perchasdisfr = 0) {
             cantsemana = 0;
         }
+        else
+        {
+            cout << "Ingrese la cantidad de semanas de alquiler: " << endl;
+            cin >> cantsemana;
+            cin.ignore();
 
-        cout << " desea alquilar el disfraz? (1 = Si, 0 = No): "<<endl;
+            if (cantsemana < 0) {
+                throw excepciones_unsigned_int();
+            }
+        }
+      
+
+        cout << "Desea alquilar el disfraz? (1 = Si, 0 = No): " << endl;
         cin >> alquiler;
+        cin.ignore();
+
+        if (alquiler != 1 && alquiler != 0) {
+            throw excepciones_bool();
+        }
 
         // Crear objeto Cliente con los datos ingresados
-        Cliente micliente2("tito", 'M',"4597868", capricho_vajilla, cant_capricho_vaj, numerodeturno, marca, cantidad,
+        Cliente micliente2(nombre, sexo, DNI, capricho_vajilla, cant_capricho_vaj, numerodeturno, marca, cantidad,
             pararegalar, formapagar, ticketfisico, mail, perchasdisfr, cantsemana, alquiler);
 
-        Empleado empleado("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
+        Empleado empleado2("Pedro", 'M', "407654321", 2000, "8 horas diarias", "30 días al año", "Ventas");
 
-        Encargado encargado("lucila", 'F', "437654321", 4000, "8 horas diarias", "50 días al año", "Caja");
+        Encargado encargado2("lucila", 'F', "437654321", 4000, "8 horas diarias", "50 días al año", "Caja");
 
-        empleado.llamarnum(micliente2);
+        empleado2.llamarnum(micliente2);
 
-        bool prueba = encargado.buscar_pedido_cliente(listaProductos, micliente2);
+        bool prueba2 = encargado2.buscar_pedido_cliente(listaProductos, micliente2);
 
         //ahora simulamos ingreso por pantalla
-        if (prueba == false)
+        if (prueba2 == false)
 
             cout << "Disculpeme " << micliente2.get_nombre() << " , pero no hay stock de lo que pide." << endl;
 
+        else
+            cout << "fue atendido correctamente" << endl << endl << endl;
+
     }
-    catch (const exception& e) {
-        cout << "Error: " << e.what() << endl;
-    }
-   
+//capturo las excepciones de manera especifica
+catch (const excepcion_sexo& e) {
+    cout << "Se produjo una excepción de tipo excepcion_sexo: " << e.what() << endl;
+}
+catch (const excepciones_bool& e) {
+    cout << "Se produjo una excepción de tipo excepciones_bool: " << e.what() << endl;
+}
+catch (const excepciones_unsigned_int& e) {
+    cout << "Se produjo una excepción de tipo excepciones_unsigned_int: " << e.what() << endl;
+}
+catch (const exception& e) {
+    cout << "Se produjo una excepción: " << e.what() << endl;
+}
+cin.ignore();
+
     for (list<producto*>::iterator it = listaProductos.begin(); it != listaProductos.end(); ++it) {
         delete* it;
     }
     
+
+
+    cout << "/corre el programa/" << endl;
+
     return 0;
 }
